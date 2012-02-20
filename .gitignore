@@ -1,2 +1,5 @@
 _cache
 _site
+cdr
+*.hi
+*.o
