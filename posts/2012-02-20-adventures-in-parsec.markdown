@@ -17,7 +17,19 @@ The [Apache Web Server][apache2] is probably the world's most common web server.
     
 If your logfile is formatted differently you will need to make some adjustments. The fields are, in order: IP, ident, user, date, request, code, bytes, referrer, user-agent. To make sure we can get out any and all interesting information, we will parse each of these values and collect them in a data type. Let's define it now!
 
-<script src="https://gist.github.com/1869088.js?file=adventure-1.hs"></script>
+~~~~~{.haskell}
+data LogLine = LogLine {
+      getIP     :: String
+    , getIdent  :: String
+    , getUser   :: String
+    , getDate   :: String
+    , getReq    :: String
+    , getStatus :: String
+    , getBytes  :: String
+    , getRef    :: String
+    , getUA     :: String
+} deriving (Ord, Show, Eq)
+~~~~~
 
 We use record syntax to get accessors for free. We also let the compiler derive instances for the Ord, Show and Eq typeclasses, for convenience.
 
@@ -27,7 +39,10 @@ The next step will be the actual parsing of a line from our log. When I original
 
 If we look at our example log line above, we note that each value is separated by a space. However, some values have spaces in them, these are surrounded by quotes or square brackets. So those are the three types of values we need to parse. Let's start by defining the easiest one, the plain value.
 
-<script src="https://gist.github.com/1869088.js?file=adventure-2.hs"></script>
+~~~~~{.haskell}
+plainValue :: Parser String
+plainValue = many1 (noneOf " \n")
+~~~~~
 
 The signature can be read as the result of plainValue will be a String in the Parser monad. One of the benefits of Parsec being a monad is that we get do-notation, which we will be using in the other parsers. Coming back to the plainValue parser, it starts by using `many1` which in the [documentation][parseccombdoc] is described as taking a parser and applying it one or more times and finally returning a list of the values. In our case, what we want to do is keep consuming characters until we hit a space, because the Apache log line values are space delimited. For this we use `noneOf`, which will take a list of characters and consume one character, as long as that character is not in the supplied list.
 
@@ -35,21 +50,74 @@ Combined, `many1 (noneOf " \n")` will keep consuming characters until it hits a 
 
 Our next problem are the two cases of the bracketed value and the quoted value. Both of these can have spaces in them, so we will have to write parsers for these special cases.
 
-<script src="https://gist.github.com/1869088.js?file=adventure-3.hs"></script>
+~~~~~{.haskell}
+bracketedValue :: Parser String
+bracketedValue = do
+    char '['
+    content <- many (noneOf "]")
+    char ']'
+    return content
+
+quotedValue :: Parser String
+quotedValue = do
+    char '"'
+    content <- many (noneOf "\"")
+    char '"'
+    return content
+~~~~~
 
 Here we see parsers written in do notation. Not only are they quite clean and simple, but they really do directly describe the formatting of our log lines! Let's look at bracketedValue: it starts by trying to consume a left bracket character. After that we bind the result of `many (noneOf "]")` in the name content. Like the earlier `many1 (noneOf " \n")` this will keep consuming characters until it comes upon one from the supplied list. Finally we consume one last character, the ending bracket, and use return to put our result into the Parser monad.
 
 Now that we have covered the possible ways our values can look, we need to use these parsers to define how to parse a whole line. Since we want to collect each result into the LogLine data-type, we need to make sure to bind the result of every value. Let's give it a try!
 
-<script src="https://gist.github.com/1869088.js?file=adventure-4.hs"></script>
+~~~~~{.haskell}
+logLine :: Parser LogLine
+logLine = do
+    ip <- plainValue
+    space -- parse and throw away a space
+    ident <- plainValue
+    space
+    user <- plainValue
+    space
+    date <- bracketedValue
+    space
+    req <- quotedValue
+    space
+    status <- plainValue
+    space
+    bytes <- plainValue
+    space
+    ref <- quotedValue
+    space
+    ua <- quotedValue
+    return $ LogLine ip ident user date req status bytes ref ua 
+~~~~~
 
 Although slightly verbose, it should be quite easy to interpret this parser. Believe it or not, we're done. This will parse well formed Apache combined log style lines. Let's try it out on our example!
 
-<script src="https://gist.github.com/1869088.js?file=adventure-7.hs"></script>
+~~~~~{.haskell}
+testLine = "192.168.1.80 - - [18/Feb/2011:20:21:30 +0100] 
+	   \"GET / HTTP/1.0\" 503 2682 \"-\" \"-\""
+
+main = case parse logLine "(test)" testLine of
+            Left err  -> print err
+            Right res -> print res
+~~~~~
 
 `parse` extracts the result of the parser on the input from the parsec monad and either gives us an error or the result. And the result should look something like this
 
-<script src="https://gist.github.com/1869088.js?file=adventure-5.hs"></script>
+~~~~~{.haskell}
+LogLine { getIP     = "192.168.1.80"
+        , getIdent  = "-"
+        , getUser   = "-"
+        , getDate   = "18/Feb/2011:20:21:30 +0100"
+        , getReq    = "GET / HTTP/1.0"
+        , getStatus = "503"
+        , getBytes  = "2682"
+        , getRef    = "-"
+        , getUA     = "-"
+        }
+~~~~~
 
 The example code file is available [here][examplecode].
 
