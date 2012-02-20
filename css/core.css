@@ -54,8 +54,16 @@ p {
 	line-height:1.5;
 }
 
-.gist {
-	margin-bottom:40px;
+pre {
+	margin-bottom:30px;
+}
+
+code {
+	font-size:.7em;
+}
+
+pre code {
+	font-size:1em;
 }
 
 /*
