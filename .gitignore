@@ -3,3 +3,4 @@ _site
 cdr
 *.hi
 *.o
+.DS_Store
