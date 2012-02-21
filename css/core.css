@@ -145,3 +145,7 @@ a:hover {
 .wrapper {
 	background-color:white;
 }
+
+.logo {
+	width:210px; /* ugly */
+}
