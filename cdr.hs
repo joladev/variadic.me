@@ -27,6 +27,14 @@ main = hakyll $ do
             >>> applyTemplateCompiler "templates/default.html"
             >>> relativizeUrlsCompiler
 
+    -- Render projects
+    match "projects/*" $ do
+        route   $ setExtension ".html"
+        compile $ pageCompiler
+            >>> applyTemplateCompiler "templates/project.html"
+            >>> applyTemplateCompiler "templates/default.html"
+            >>> relativizeUrlsCompiler
+
     -- Render posts list
     match  "posts.html" $ route idRoute
     create "posts.html" $ constA mempty
