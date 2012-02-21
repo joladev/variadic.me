@@ -1,3 +1,7 @@
+/* ! 
+	color:#58026D;
+*/
+
 body {
 	font-size:.9em;
 	background-color:#333;
@@ -5,14 +9,18 @@ body {
 
 .menu {
 	position:absolute;
-	right:200px;	
+	right:50px;	
 	top:56px;
 	height:32px;
-	width:200px;
+	width:250px;
 }
 
 .menu-link {
 	text-decoration:none;
+}
+
+.menu img {
+	margin-left:5px;
 }
 
 .container {
@@ -34,11 +42,6 @@ h1 {
 	margin-bottom:30px;
 }
 
-h1:hover {
-	color:#58026D;
-}
-
-
 h2 {
 	font-size:1.8em;
 	margin-bottom:20px;
@@ -59,7 +62,7 @@ h3 {
 }
 
 .post {
-	margin-bottom:130px;
+	margin-bottom:30px;
 }
 
 p {
