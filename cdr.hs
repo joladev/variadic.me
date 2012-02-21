@@ -81,8 +81,8 @@ addProjectList = setFieldA "projects" $
 
 feedConfiguration :: FeedConfiguration
 feedConfiguration = FeedConfiguration
-    { feedTitle       = "SimpleBlog RSS feed."
-    , feedDescription = "A simple demo of an RSS feed created with Hakyll."
-    , feedAuthorName  = "Jasper Van der Jeugt"
-    , feedRoot        = "http://example.com"
+    { feedTitle       = "variadic.me blog feed"
+    , feedDescription = "blog feed"
+    , feedAuthorName  = "Erik Kronberg"
+    , feedRoot        = "http://variadic.me"
     }
