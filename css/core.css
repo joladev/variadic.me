@@ -11,6 +11,10 @@ body {
 	width:200px;
 }
 
+.menu-link {
+	text-decoration:none;
+}
+
 .container {
 	padding-top:40px;
 	min-height:400px;
