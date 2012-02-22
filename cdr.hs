@@ -23,6 +23,7 @@ main = hakyll $ do
     match "posts/*" $ do
         route   $ setExtension ".html"
         compile $ pageCompiler
+            >>> renderTagsField "prettytags" (fromCapture "tags/*")
             >>> applyTemplateCompiler "templates/post.html"
             >>> applyTemplateCompiler "templates/default.html"
             >>> relativizeUrlsCompiler
@@ -57,7 +58,7 @@ main = hakyll $ do
     match  "index.html" $ route idRoute
     create "index.html" $ constA mempty
         >>> arr (setField "title" "Home")
-        >>> requireAllA "posts/*" addPostList
+        >>> requireAllA "posts/*" (id *** arr (take 3 . reverse . sortByBaseName) >>> addPostList)
         >>> requireAllA "projects/*" addProjectList
         >>> applyTemplateCompiler "templates/index.html"
         >>> applyTemplateCompiler "templates/default.html"
@@ -74,10 +75,26 @@ main = hakyll $ do
     -- Render RSS feed
     match  "rss.xml" $ route idRoute
     create "rss.xml" $
-        requireAll_ "posts/*" >>> renderRss feedConfiguration
+        requireAll_ "posts/*" 
+            >>> mapCompiler (arr $ copyBodyToField "description")
+            >>> renderRss feedConfiguration
+
+    -- Tags
+    create "tags" $
+        requireAll "posts/*" (\_ ps -> readTags ps :: Tags String)
+
+    -- Add a tag list compiler for every tag
+    match "tags/*" $ route $ setExtension ".html"
+    metaCompile $ require_ "tags"
+        >>> arr tagsMap
+        >>> arr (map (\(t, p) -> (tagIdentifier t, makeTagList t p)))
 
     -- Read templates
     match "templates/*" $ compile templateCompiler
+
+  where
+    tagIdentifier :: String -> Identifier (Page String)
+    tagIdentifier = fromCapture "tags/*"
 
 -- | Auxiliary compiler: generate a post list from a list of given posts, and
 -- add it to the current page under @$posts@
