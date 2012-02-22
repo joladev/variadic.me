@@ -12,6 +12,12 @@ import Hakyll
 main :: IO ()
 main = hakyll $ do
 
+    -- Render the 404 page, no relativized urls.
+    match "404.html" $ do
+        route idRoute
+        compile $ pageCompiler
+            >>> applyTemplateCompiler "templates/default.html"
+
     -- Copy robots
     match "robots.txt" $ do
         route   idRoute
