@@ -44,6 +44,15 @@ main = hakyll $ do
         >>> applyTemplateCompiler "templates/default.html"
         >>> relativizeUrlsCompiler
 
+    -- Render projects list
+    match  "projects.html" $ route idRoute
+    create "projects.html" $ constA mempty
+        >>> arr (setField "title" "All projects")
+        >>> requireAllA "projects/*" addProjectList
+        >>> applyTemplateCompiler "templates/projects.html"
+        >>> applyTemplateCompiler "templates/default.html"
+        >>> relativizeUrlsCompiler
+
     -- Index
     match  "index.html" $ route idRoute
     create "index.html" $ constA mempty
