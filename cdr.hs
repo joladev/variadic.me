@@ -11,11 +11,18 @@ import Hakyll
 
 main :: IO ()
 main = hakyll $ do
+
+    -- Copy robots
+    match "robots.txt" $ do
+        route   idRoute
+        compile copyFileCompiler
+
     -- Compress CSS
     match "css/*" $ do
         route   idRoute
         compile compressCssCompiler
 
+    -- Copy images
     match "images/*" $ do
         route   idRoute
         compile copyFileCompiler
@@ -46,27 +53,17 @@ main = hakyll $ do
         >>> applyTemplateCompiler "templates/default.html"
         >>> relativizeUrlsCompiler
 
-    -- Render projects list
-    match  "projects.html" $ route idRoute
-    create "projects.html" $ constA mempty
-        >>> arr (setField "title" "All projects")
-        >>> requireAllA "projects/*" addProjectList
-        >>> applyTemplateCompiler "templates/projects.html"
-        >>> applyTemplateCompiler "templates/default.html"
-        >>> relativizeUrlsCompiler
-
     -- Index
     match  "index.html" $ route idRoute
     create "index.html" $ constA mempty
         >>> arr (setField "title" "Home")
         >>> requireAllA "posts/*" (id *** arr (take 3 . reverse . sortByBaseName) >>> addPostList)
-        >>> requireAllA "projects/*" addProjectList
         >>> applyTemplateCompiler "templates/index.html"
         >>> applyTemplateCompiler "templates/default.html"
         >>> relativizeUrlsCompiler
 
     -- About
-    forM_ ["about.markdown"] $ \p ->
+    forM_ ["about.markdown", "projects.markdown"] $ \p ->
         match p $ do
             route   $ setExtension ".html"
             compile $ pageCompiler
@@ -104,13 +101,6 @@ addPostList :: Compiler (Page String, [Page String]) (Page String)
 addPostList = setFieldA "posts" $
     arr (reverse . sortByBaseName)
         >>> require "templates/postitem.html" (\p t -> map (applyTemplate t) p)
-        >>> arr mconcat
-        >>> arr pageBody
-
-addProjectList :: Compiler (Page String, [Page String]) (Page String)
-addProjectList = setFieldA "projects" $
-    arr (reverse . sortByBaseName)
-        >>> require "templates/projectitem.html" (\p t -> map (applyTemplate t) p)
         >>> arr mconcat
         >>> arr pageBody
 
