@@ -3,6 +3,7 @@ module Main where
 
 import Prelude hiding (id)
 import Control.Category (id)
+import Control.Monad (forM_)
 import Control.Arrow ((>>>), (***), arr)
 import Data.Monoid (mempty, mconcat)
 
@@ -65,12 +66,12 @@ main = hakyll $ do
         >>> relativizeUrlsCompiler
 
     -- About
-    match "about.html"  $ route idRoute
-    create "about.html" $ constA mempty
-        >>> arr (setField "title" "About")
-        >>> applyTemplateCompiler "templates/about.html"
-        >>> applyTemplateCompiler "templates/default.html"
-        >>> relativizeUrlsCompiler
+    forM_ ["about.markdown"] $ \p ->
+        match p $ do
+            route   $ setExtension ".html"
+            compile $ pageCompiler
+                >>> applyTemplateCompiler "templates/default.html"
+                >>> relativizeUrlsCompiler
 
     -- Render RSS feed
     match  "rss.xml" $ route idRoute
