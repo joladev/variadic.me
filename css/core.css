@@ -9,30 +9,27 @@ body {
 
 .menu {
 	position:absolute;
-	right:50px;	
+	right:90px;	
 	top:56px;
 	height:60px;
 	width:250px;
 }
 
-.menu-link {
+.menu-item {
+	float:left;
+	margin-right:10px;
+	padding-bottom:0;
 	text-decoration:none;
 }
 
-.menu img {
-	margin-left:5px;
+.menu-item {
+	
 }
 
 .container {
 	padding-top:40px;
 	min-height:400px;
 	position: relative;
-}
-
-footer {
-	height:100px;
-	position:absolute;
-	bottom:0;
 }
 
 h1 {
