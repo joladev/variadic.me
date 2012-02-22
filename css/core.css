@@ -147,6 +147,11 @@ a:hover {
 .bottom {
 	min-height:200px;
 	background-color:#333;
+	color:#D9D9D9;
+	font-style:italic;
+	font-size:.7em;
+	text-align:center;
+	padding-top:20px;
 }
 
 .wrapper {
