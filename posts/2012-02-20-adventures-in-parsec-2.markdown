@@ -1,6 +1,7 @@
 ---
 title: Adventures in Parsec - Part 2
 date: February 20, 2012
+tags: haskell, parsec
 ---
 
 This is part 2 of a series of simple Haskell tutorials. See the first one [here][part1].
