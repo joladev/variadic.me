@@ -4,4 +4,4 @@ title: About
 
 ## About me
 
-Hell, it's about time.
+I like turtles.
