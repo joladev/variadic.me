@@ -63,6 +63,14 @@ main = hakyll $ do
         >>> applyTemplateCompiler "templates/default.html"
         >>> relativizeUrlsCompiler
 
+    -- About
+    match "about.html"  $ route idRoute
+    create "about.html" $ constA mempty
+        >>> arr (setField "title" "About")
+        >>> applyTemplateCompiler "templates/about.html"
+        >>> applyTemplateCompiler "templates/default.html"
+        >>> relativizeUrlsCompiler
+
     -- Render RSS feed
     match  "rss.xml" $ route idRoute
     create "rss.xml" $
