@@ -24,7 +24,8 @@ body {
 
 .container {
 	padding-top:40px;
-	min-height:400px;
+	padding-bottom:40px;
+	min-height:360px;
 	position: relative;
 }
 
@@ -52,10 +53,6 @@ h3 {
 	font-style:italic;
 	margin-bottom:-20px;
 	padding-left:10px;
-}
-
-.post {
-	margin-bottom:30px;
 }
 
 p {
@@ -140,7 +137,7 @@ a:hover {
 .bottom {
 	min-height:200px;
 	background-color:#333;
-	color:#D9D9D9;
+	color:#8b8989;
 	font-style:italic;
 	font-size:.7em;
 	text-align:center;
