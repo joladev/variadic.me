@@ -8,11 +8,11 @@ tags: haskell, parsec
 
 This will be the first in a series of little Haskell "tutorials". Together we will re-write an old script of mine. You probably need to know a little bit of Haskell, the more the better, but if you are already an avid Haskeller the series might be too basic. 
 
-If you want to learn the basics of Haskell I can warmly recommend [Learn You A Haskell][lyah] (also available as dead tree). Many of the chapters in this book bears reading more than once! Already read it? Want to learn more about how to build stuff? [Real World Haskell][rwh] is an amazing book to move on with, filled to the brim with practical exercises and advice (and I've used it for reference heavily while writing this). Again, available in print.
+If you want to learn the basics of Haskell I can warmly recommend [Learn You A Haskell][lyah]. This book bears reading more than once! And then, to learn more about how to build stuff; [Real World Haskell][rwh] is an amazing book to move on with, filled to the brim with practical exercises and advice (and I've used it for reference heavily while originally writing this script).
 
 ### The Case Study
 
-The [Apache Web Server][apache2] is probably the world's most common web server. , it logs each request it handles with some information. Although big IT companies may be very good at using such information, for most of the rest of us the logs just lay there growing. Let's see if we can't find extract some interesting information from them! If you don't have access to a log file yourself but want to follow the tutorials, you can download this [sample one][samplelog]. The log format we're working with is the [Apache combined log format][combinedlog]. Here is an example line:
+The [Apache Web Server][apache2] is probably the world's most common web server, and like most web servers, it logs each request it handles with some information. Although big IT companies may be very good at using such information, for most of the rest of us the logs just lie there growing. Let's see if we can't extract some interesting information from them! The log format we're working with is the [Apache combined log format][combinedlog]. Here is an example line:
 
     192.168.1.80 - - [18/Feb/2011:20:21:30 +0100] "GET / HTTP/1.0" 503 2682 "-" "-"
     
@@ -67,7 +67,7 @@ quotedValue = do
     return content
 ~~~~~
 
-Here we see parsers written in do notation. Not only are they quite clean and simple, but they really do directly describe the formatting of our log lines! Let's look at bracketedValue: it starts by trying to consume a left bracket character. After that we bind the result of `many (noneOf "]")` in the name content. Like the earlier `many1 (noneOf " \n")` this will keep consuming characters until it comes upon one from the supplied list. Finally we consume one last character, the ending bracket, and use return to put our result into the Parser monad.
+Here we see parsers written in do notation. Not only are they quite clean and simple, but they really do describe the formatting of our log lines! Let's look at `bracketedValue`: it starts by trying to consume a left bracket character. After that we bind the result of `many (noneOf "]")` in the name content. Like the earlier `many1 (noneOf " \n")` this will keep consuming characters until it comes upon one from the supplied list. Finally we consume one last character, the ending bracket, and use return to put our result into the Parser monad.
 
 Now that we have covered the possible ways our values can look, we need to use these parsers to define how to parse a whole line. Since we want to collect each result into the LogLine data-type, we need to make sure to bind the result of every value. Let's give it a try!
 
@@ -126,7 +126,6 @@ The example code file is available [here][examplecode].
 [rwh]: http://book.realworldhaskell.org/read/
 [apache2]: http://httpd.apache.org/
 [combinedlog]: http://httpd.apache.org/docs/2.2/logs.html#combined
-[samplelog]: http://FIXTHIS.NOW
 [parsercombinators]: http://en.wikipedia.org/wiki/Parser_combinator
 [parsec]: http://hackage.haskell.org/package/parsec
 [parseccombdoc]: http://hackage.haskell.org/packages/archive/parsec/3.1.1/doc/html/Text-Parsec-Combinator.html
