@@ -130,4 +130,4 @@ The example code file is available [here][examplecode].
 [parsercombinators]: http://en.wikipedia.org/wiki/Parser_combinator
 [parsec]: http://hackage.haskell.org/package/parsec
 [parseccombdoc]: http://hackage.haskell.org/packages/archive/parsec/3.1.1/doc/html/Text-Parsec-Combinator.html
-[examplecode]: https://gist.github.com/1869088#file_adventure.hs
+[examplecode]: https://gist.github.com/1899836
