@@ -1,69 +1,103 @@
+/* ! 
+	color:#58026D;
+*/
+
+body {
+	font-size:.9em;
+	background-color:#333;
+}
+
 .menu {
 	position:absolute;
-	left:40px;
-	top:200px;
-	height:400px;
-	width:200px;
+	right:90px;	
+	top:56px;
+	height:60px;
+	width:250px;
+}
+
+.menu-item {
+	float:left;
+	margin-right:10px;
+	padding-bottom:0;
+	text-decoration:none;
 }
 
 .container {
 	padding-top:40px;
-	min-height:600px;
+	padding-bottom:40px;
+	min-height:360px;
 	position: relative;
-}
-
-footer {
-	height:100px;
-	border-top:2px solid black;
-	position:absolute;
-	bottom:0;
 }
 
 h1 {
 	font-family:Helvetica;
 	padding-top:10px;
-	font-size:5em;
-	display:block;
+	font-size:4em;
 	margin-bottom:30px;
 }
 
-h1:hover {
-	color:#58026D;
-	text-decoration:none;
-}
-
-a:hover {
-	text-decoration:none;	
-}
-
 h2 {
-	font-size:2.2em;
+	font-size:1.8em;
 	margin-bottom:20px;
-	margin-left:4px;
+}
+
+
+h3 {
+	font-size:1.4em;
+	margin-bottom:5px;
 }
 
 .date {
-	font-size:1em;
+	font-size:.9em;
 	color:#808080;
 	font-style:italic;
 	margin-bottom:-20px;
 	padding-left:10px;
 }
 
-.post {
-	margin-bottom:130px;
-}
-
 p {
 	padding: 0 20px 20px 20px;
-	font-size:1.5em;
+	font-size:1.1em;
 	line-height:1.5;
 }
 
-.gist {
-	margin-bottom:40px;
+pre {
+	margin-bottom:30px;
 }
 
+code {
+	font-size:.8em;
+	font-family:"Bitstream Vera Sans Mono",Consolas,Monaco,monospace;
+}
+
+
+/*
+
+CSS to add linenumbers to embedded gists
+
+https://gist.github.com/1243028
+
+*/
+/*
+.gist-highlight {
+    border-left: 3ex solid #eee;
+    position: relative;
+}
+
+.gist-highlight pre {
+    counter-reset: linenumbers;
+}
+
+.gist-highlight pre div:before {
+    color: #aaa;
+    content: counter(linenumbers);
+    counter-increment: linenumbers;
+    left: -3ex;
+    position: absolute;
+    text-align: right;
+    width: 2.5ex;
+}
+*/
 ul {
 	list-style:none;
 	font-weight:bold;
@@ -79,4 +113,48 @@ pre {
 
 .header {
 	height:110px;
+}
+
+a {
+	color:#333;
+	text-decoration:underline;
+}
+
+a.h1 {
+	text-decoration:none;
+}
+
+a:hover {
+	color:#333;
+	text-decoration:none;	
+}
+
+.top {
+	height:100px;
+	background-color:#333;
+}
+
+.bottom {
+	min-height:200px;
+	background-color:#333;
+	color:#8b8989;
+	font-style:italic;
+	font-size:.7em;
+	text-align:center;
+	padding-top:20px;
+}
+
+.wrapper {
+	background-color:white;
+}
+
+.logo {
+	width:210px; /* ugly */
+}
+
+#four---oh---four {
+	margin-top:70px;
+	margin-left:50px;
+
+	font-size:5em;
 }

@@ -1,0 +1,31 @@
+---
+title: New Blog
+date: February 23, 2012
+tags: hakyll, haskell
+---
+
+### Why [Hakyll][hakyll]?
+
+I originally set out to make a blog for myself around two years ago. I even got as far as writing two posts for it, but the blog software itself never got anywhere. You see, I decided I should make it myself. I could go the "easy" way and use tumblr or the like, or almost as easy with Wordpress. But I figured it would be a chance to put myself to the test, building something I could be happy with, and at the same time making sure I could shape the blog software exactly the way I wanted it. At the time I looked at building it in Django.
+
+Long story short, I never got around to building it, and the blog posts landed in some archive folder.
+
+Recently I've had a lot more free time, and after finishing a small project (to be launched) I set off to build this blog. I had been working with [Clojure][clojure] and the amazing [Noir][noir] package so that's where I went first, the result was an exceedingly simple Django-inspired architecture, of templates, routes, views and a very light model layer around [Redis][redis]. So light, in fact, I started thinking maybe I was going about this the wrong way. I remember reading about static site generators, and one in particular, written in [Haskell][haskell]. Static site generators in general are frameworks for creating a finished static website from various sources. The result is a database free, code free, plain html site directory that can be easily deployed to the web server of your choice.
+
+Although the hakyll webpage hadn't changed much since I last looked at it, the [github repo][hakyllgithub] has had a lot of activity and the blog in the examples page had been joined with slightly more complicated examples. Also on the main Hakyll page there's a list of [existing Hakyll pages][hakyllexamples], including source code, an amazing source of snippets and inspiration.
+
+Now, apart from the beautiful Hakyll package, the language itself is the biggest draw for me. Haskell is a very special language, unlike what most programmers are exposed to (sadly?). No matter what side you come down on in imperative vs declarative programming, learning Haskell will widen your mind. Check out [Try Haskell][tryhaskell] to try it out in your browser. __It's worth it.__
+
+So I got the blogging software, I get to use a language I love... I guess I've run out of excuses not to make this site! I'll put up the two old blog posts I wrote ages ago, together with this post.
+
+I am not planning on adding a comment system, rather I'd prefer it if you email me with opinions, advice or questions. 
+
+[hakyll]: http://jaspervdj.be/hakyll/
+[clojure]: http://clojure.org/
+[noir]: http://webnoir.org/
+[redis]: http://redis.io/
+[haskell]: http://www.haskell.org/haskellwiki/Haskell
+[jaspervdj]: http://jaspervdj.be/
+[hakyllgithub]: https://github.com/jaspervdj/hakyll
+[hakyllexamples]: http://jaspervdj.be/hakyll/examples.html
+[tryhaskell]: http://tryhaskell.org/

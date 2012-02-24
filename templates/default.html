@@ -3,32 +3,79 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <title>variadic.me - $title$</title>
-    <link rel="stylesheet" type="text/css" href="/css/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="/css/syntax.css" />
+    <link rel="stylesheet" type="text/css" href="/css/bootstrap.css" />
     <link rel="stylesheet" type="text/css" href="/css/core.css" />
     <link rel="alternate"
           type="application/rss+xml"
           title="SimpleBlog"
           href="/rss.xml" />
+
+    <script type="text/javascript">
+
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', 'UA-16166562-4']);
+      _gaq.push(['_trackPageview']);
+
+      (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+      })();
+
+    </script>
+
   </head>
   <body>
-    <div class="menu">
-    </div>
-    <div class="container">
-      <div class="row">
-        <div class="span10 offset1 header">
-          <a href="/">
-            <h1>variadic.me</h1>
-          </a>
-        </div>
-        
-        <div class="span10 offset1">
-          $body$
+    <div class="top"></div>
+    <div class="wrapper">
+      <div class="container">
+        <div class="menu">
+          <ul>
+            <li class="menu-item">
+              <a href="/">
+                <img src="/images/home32.png" />
+              </a>
+            </li>
+            <li class="menu-item">
+              <a href="/posts.html">
+                <img src="/images/linedpaper32.png" />
+              </a>
+            </li>
+            <li class="menu-item">
+              <a href="/projects.html">
+                <img src="/images/bag32.png" />
+              </a>
+            </li>
+            <li class="menu-item">
+              <a href="/about.html">
+                <img src="/images/user32.png" />
+              </a>
+            </li>
+            <li class="menu-item">
+              <a href="/rss.xml">
+                <img src="/images/rss32.png" />
+              </a>
+            </li>
+          </ul>
         </div>
 
-        <footer class="offset1 span10">
-
-        </footer>
+        <div class="row">
+          <div class="span10 offset1 header">
+            <div class="logo">
+              <a class="h1" href="/">
+                <h1>variadic.me</h1>
+              </a>
+            </div>
+          </div>
+          
+          <div class="span10 offset1">
+            $body$
+          </div>
+        </div>
       </div>
     </div>
+
+    <div class="bottom">©2012</div>
   </body>
 </html>

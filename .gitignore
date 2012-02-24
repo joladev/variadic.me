@@ -1,2 +1,6 @@
 _cache
 _site
+cdr
+*.hi
+*.o
+.DS_Store
