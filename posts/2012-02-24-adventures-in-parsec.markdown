@@ -1,6 +1,6 @@
 ---
 title: Adventures in Parsec - Part 1
-date: February 20, 2012
+date: February 24, 2012
 tags: haskell, parsec
 ---
 
