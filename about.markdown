@@ -21,4 +21,4 @@ Feel free to contact me at erik.a.kronberg@gmail.com. I enjoy emails. And cats.
 [markdown]: http://daringfireball.net/projects/markdown/
 [subl]: http://www.sublimetext.com/2
 [nginx]: http://nginx.org/
-[linode]: http://linode.com/
+[linode]: http://www.linode.com/?r=149bc10682eeaffb72d9bd6e7a4e722c5687768a
