@@ -8,7 +8,7 @@ tags: parsec, haskell, attoparsec
 
 As I previously mentioned I originally wrote those posts on simple use of Parsec over a year ago. When I finally got around to making my blog, I figured it wouldn't hurt to post them. I was impressed with the positive reaction, especially considering how specific my target audience is. You need to be comfortable with Haskell, but you haven't really used it to build anything yet. I was there once, and I found it hard to take that next step. I also got a lot of requests for examples of parsing more complex grammar, this may be something I'll do if I happen across a good subject.
 
-Anyway, I originally aimed to make a longer series, but none of this is very fresh in memory. I dug up one of later versions of this script, and I figured I could write it up, for those interested! The full script is linked to at the bottom of the post.
+Anyway, I originally aimed to make a longer series, but none of this is very fresh in memory. I dug up one of the later versions of this script, and I figured I could write it up, for those interested! The full script is linked to at the bottom of the post.
 
 ### The need for speed
 
