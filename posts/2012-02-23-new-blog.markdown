@@ -2,6 +2,7 @@
 title: New Blog
 date: February 23, 2012
 tags: hakyll, haskell
+description: Setup myself up the blog
 ---
 
 ### Why [Hakyll][hakyll]?

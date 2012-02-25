@@ -2,6 +2,7 @@
 title: Adventures in Parsec - Making it fast with attoparsec
 date: February 25, 2012
 tags: parsec, haskell, attoparsec
+description: Improving previous examples of Parsec using attoparsec and bytestrings
 ---
 
 ### A year ago and today
