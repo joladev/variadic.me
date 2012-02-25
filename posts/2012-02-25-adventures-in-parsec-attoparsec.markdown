@@ -34,7 +34,7 @@ data LogLine = LogLine {
 } deriving (Ord, Show, Eq)
 ~~~~~
 
-Next step is defining the type of elements a log line can consist of. Like I said, this is going to look a little bit different from the previous version. Although I did look at the attoparsec `char` parser combinator, and I found that manually defining them using `satisfy` actually resulted in a noticeable performance improvement (admittedly, anything is noticeable parsing a 2GB log file on a laptop). Still, defining them this way is quite simple.
+Next step is defining the type of elements a log line can consist of. Like I said, this is going to look a little bit different from the previous version. Although I did look at the attoparsec `char` parser combinator, after some experimentation I found that manually defining them using `satisfy` actually resulted in a noticeable performance improvement (admittedly, anything is noticeable parsing a 2GB log file on a laptop). Still, defining them this way is quite simple.
 
 ~~~~~{.haskell}
 quote, lbrack, rbrack, space :: Parser Char
@@ -154,12 +154,8 @@ dispatch cmd path = action path
 -- Associative list of commands and actions.
 actions :: [(Command, FilePath -> IO ())]
 actions = [("ips", mapToTopList countIPs)
-		   -- add your own actions here
-		  ]
-
--- Action to count total number of bytes transmitted in log file.
-countTotalBytes :: FilePath -> IO ()
-countTotalBytes path = print . countBytes . L.lines =<< L.readFile path
+	   -- add your own actions here
+	  ]
 
 -- Helper that turns a map into a top list, based on the second value.
 mapToTopList :: ([L.ByteString] -> [(S.ByteString, Int)]) -> FilePath -> IO ()
