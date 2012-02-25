@@ -178,7 +178,7 @@ I also implemented this script using the map reduce module from [Real World Hask
 [bos]: http://www.serpentine.com/blog/
 [snap]: http://snapframework.com/
 [yesod]: http://www.yesodweb.com/
-[part1]: http://variadic.me/posts/2012-02-24-adventures-in-parsec.html
+[part1]: /posts/2012-02-24-adventures-in-parsec.html
 [assoclist]: http://neilmitchell.blogspot.com/2008/01/associative-lists.html
 [codeexample]: https://gist.github.com/1908213
 [rwh]: http://book.realworldhaskell.org/
