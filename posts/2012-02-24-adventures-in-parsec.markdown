@@ -2,6 +2,7 @@
 title: Adventures in Parsec - Part 1
 date: February 24, 2012
 tags: haskell, parsec
+description: Beginner level post on how to use Parsec to parse a log file
 ---
 
 ### Introduction

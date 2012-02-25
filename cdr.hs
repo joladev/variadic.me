@@ -68,7 +68,7 @@ main = hakyll $ do
     match  "index.html" $ route idRoute
     create "index.html" $ constA mempty
         >>> arr (setField "title" "Home")
-        >>> requireAllA "posts/*" (id *** arr (take 3 . reverse . sortByBaseName) >>> addPostList)
+        >>> requireAllA "posts/*" (id *** arr (take 5 . reverse . sortByBaseName) >>> addPostList)
         >>> applyTemplateCompiler "templates/index.html"
         >>> applyTemplateCompiler "templates/default.html"
         >>> relativizeUrlsCompiler
@@ -83,10 +83,7 @@ main = hakyll $ do
 
     -- Render RSS feed
     match  "rss.xml" $ route idRoute
-    create "rss.xml" $
-        requireAll_ "posts/*" 
-            >>> mapCompiler (arr $ copyBodyToField "description")
-            >>> renderRss feedConfiguration
+    create "rss.xml" $ requireAll_ "posts/*" >>> renderRss feedConfiguration
 
     -- Tags
     create "tags" $
