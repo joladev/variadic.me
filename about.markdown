@@ -8,7 +8,7 @@ I am a student of information systems design at Lund University, Sweden. Current
 
 This blog will probably just feature basic write ups of small time projects in whatever technologies I got worked up about at the moment. There is often a serious lack of material on the step just between learning a language and being able to build advanced applications in it, and that's the area I'll be aiming for in my posts.
 
-Feel free to contact me at erik.a.kronberg@gmail.com. I enjoy emails. And cats.
+Feel free to contact me at <erik@variadic.me>. I enjoy emails. And cats.
 
 ## Colophon
 
