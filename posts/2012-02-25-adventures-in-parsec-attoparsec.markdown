@@ -117,7 +117,7 @@ Let's say we'd like to see the top 10 most common IPs to request something from 
 	9: "12.629.125.116", 3655
 	10: "118.38.22.448", 3484
 
-Rank, IP, number of occurances. To get there, first we need a function that takes a bunch of loglines and gives us a data structure with each IP and the number of times it occured. To me this sounds like a perfect job for Data.Map. And because too much laziness can be bad for you, we're using the strict implementation of it.
+Rank, IP, number of occurances. To get there, first we need a function that takes a bunch of loglines and gives us a data structure with each IP and the number of times it occured. To me this sounds like a perfect job for Data.HashMap. And because too much laziness can be bad for you, we're using the strict implementation of it.
 
 ~~~~~{.haskell}
 -- I include the imports here so you can see what the qualifiers in front of functions stand 
