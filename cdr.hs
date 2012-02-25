@@ -83,10 +83,7 @@ main = hakyll $ do
 
     -- Render RSS feed
     match  "rss.xml" $ route idRoute
-    create "rss.xml" $
-        requireAll_ "posts/*" 
-            >>> mapCompiler (arr $ copyBodyToField "description")
-            >>> renderRss feedConfiguration
+    create "rss.xml" $ requireAll_ "posts/*" >>> renderRss feedConfiguration
 
     -- Tags
     create "tags" $
