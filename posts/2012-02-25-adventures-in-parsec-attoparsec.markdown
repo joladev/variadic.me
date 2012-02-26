@@ -128,7 +128,7 @@ import qualified Data.ByteString.Char8 as S
 import qualified Data.HashMap.Strict as M
 
 countIPs :: [L.ByteString] -> [(S.ByteString,Int)]
-countIPs = M.toList . foldl count M.empty
+countIPs = M.toList . foldl' count M.empty
     where
         count acc l = case AL.maybeResult $ AL.parse line l of
             Just x  -> M.insertWith (+) (S.copy (getIP x)) 1 acc
