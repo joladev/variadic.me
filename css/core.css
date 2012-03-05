@@ -1,4 +1,6 @@
-/* ! 
+/*  
+	CSS stylesheet for variadic.me
+	Copyright 2012 Erik Kronberg
 	color:#58026D;
 */
 
@@ -70,34 +72,6 @@ code {
 	font-family:"Bitstream Vera Sans Mono",Consolas,Monaco,monospace;
 }
 
-
-/*
-
-CSS to add linenumbers to embedded gists
-
-https://gist.github.com/1243028
-
-*/
-/*
-.gist-highlight {
-    border-left: 3ex solid #eee;
-    position: relative;
-}
-
-.gist-highlight pre {
-    counter-reset: linenumbers;
-}
-
-.gist-highlight pre div:before {
-    color: #aaa;
-    content: counter(linenumbers);
-    counter-increment: linenumbers;
-    left: -3ex;
-    position: absolute;
-    text-align: right;
-    width: 2.5ex;
-}
-*/
 ul {
 	list-style:none;
 	font-weight:bold;
