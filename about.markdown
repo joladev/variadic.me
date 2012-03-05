@@ -4,7 +4,7 @@ title: About
 
 ## About me
 
-I am a student of information systems design at Lund University, Sweden. Currently taking a break from my third year studies, I work on a few projects of my own. I like Haskell, Clojure, Python, in that order, but I also have some experience in Java and C#. I also work as a part time lab instructor and mentor at my department.
+I am a student of information systems design at Lund University, Sweden. Currently taking a break from my third year studies, I work on a few projects of my own. I like Haskell, Clojure, Python, in that order, but I also have some experience in Java and C#. I work as a part time lab instructor and mentor at my department.
 
 This blog will probably just feature basic write ups of small time projects in whatever technologies I got worked up about at the moment. There is often a serious lack of material on the step just between learning a language and being able to build advanced applications in it, and that's the area I'll be aiming for in my posts.
 
