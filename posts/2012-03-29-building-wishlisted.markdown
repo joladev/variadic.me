@@ -81,7 +81,7 @@ Clojure makes Java fun.
 
 _Join the conversation at [Reddit][reddit] or email me at <erik@variadic.me>._
 
-[reddit]: http://www.reddit.com/r/programming/comments/rj1n4/building_the_wishlistedorg_webapp_in_clojure/
+[reddit]: http://www.reddit.com/r/Clojure/comments/rj0tb/building_the_wishlistedorg_webapp_in_clojure/
 [ibdknox]: http://www.chris-granger.com/
 [4clojure]: http://www.4clojure.com/
 [hiccup]: https://github.com/weavejester/hiccup
