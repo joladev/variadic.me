@@ -5,9 +5,7 @@ tags: clojure, noir
 description: Description of the design and architecture of wishlisted.org
 ---
 
-##### TL;DR
-
-I made [wishlisted.org][wishlisted] in Clojure. Here's the [source code][github].
+__TL;DR__ I made [wishlisted.org][wishlisted] in Clojure. Here's the [source code][github].
 
 ### What is wishlisted.org?
 
@@ -81,6 +79,9 @@ It also made Java more attractive to me. Clojure's principle of interop rather t
 
 Clojure makes Java fun.
 
+_Join the conversation at [Reddit][reddit] or email me at <erik@variadic.me>._
+
+[reddit]: http://www.reddit.com/r/programming/comments/rj1n4/building_the_wishlistedorg_webapp_in_clojure/
 [ibdknox]: http://www.chris-granger.com/
 [4clojure]: http://www.4clojure.com/
 [hiccup]: https://github.com/weavejester/hiccup
