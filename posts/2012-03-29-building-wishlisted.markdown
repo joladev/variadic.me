@@ -53,7 +53,7 @@ Clicking new wishlist or inputting a specific URL will load that wishlist. When 
 
 Like I mentioned, fetch is both a client and server side library. It gives you convenient functions to remotely call server side functions from your client side ClojureScript. Maybe it is easiest to understand by example:
 
-<pre class="sourceCode clojure"><code class="sourceCode clojure">(<span class="kw">defn</span><span class="fu"> read-wishlist </span>[code]
+<pre class="sourceCode clojure"><code class="sourceCode clojure">(<span class="kw">defremote</span><span class="fu"> read-wishlist </span>[code]
   (model/read-wishlist code))</code></pre>
 
 That's the server side, and this is the client side.
