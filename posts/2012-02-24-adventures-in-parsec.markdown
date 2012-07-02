@@ -123,7 +123,7 @@ LogLine { getIP     = "192.168.1.80"
 
 The example code file is available [here][examplecode].
 
-**Edit: this post was translated to Japanese by Hiroyuki Fudaba and available [here][japanese].**
+**Edit: this post was translated to Japanese by Hiroyuki Fudaba and available is [here][japanese].**
 
 [lyah]: http://learnyouahaskell.com/
 [rwh]: http://book.realworldhaskell.org/read/
