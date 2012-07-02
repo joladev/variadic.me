@@ -175,6 +175,8 @@ The full code is available [here][codeexample], including one action that counts
 
 I also implemented this script using the map reduce module from [Real World Haskell][rwh], if there's interest I'll show that too. For questions or feedback, please email me at <erik@variadic.me>.
 
+**Edit: this post was translated to Japanese by Hiroyuki Fudaba and available is [here][japanese].**
+
 [attoparsec]: http://hackage.haskell.org/package/attoparsec-0.10.1.1
 [bos]: http://www.serpentine.com/blog/
 [snap]: http://snapframework.com/
@@ -183,3 +185,4 @@ I also implemented this script using the map reduce module from [Real World Hask
 [assoclist]: http://neilmitchell.blogspot.com/2008/01/associative-lists.html
 [codeexample]: https://gist.github.com/1908213
 [rwh]: http://book.realworldhaskell.org/
+[japanese]: http://delihiros.hatenablog.jp/entry/2012/06/12/185344

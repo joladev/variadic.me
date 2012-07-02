@@ -123,6 +123,8 @@ LogLine { getIP     = "192.168.1.80"
 
 The example code file is available [here][examplecode].
 
+**Edit: this post was translated to Japanese by Hiroyuki Fudaba and available [here][japanese].**
+
 [lyah]: http://learnyouahaskell.com/
 [rwh]: http://book.realworldhaskell.org/read/
 [apache2]: http://httpd.apache.org/
@@ -131,3 +133,4 @@ The example code file is available [here][examplecode].
 [parsec]: http://hackage.haskell.org/package/parsec
 [parseccombdoc]: http://hackage.haskell.org/packages/archive/parsec/3.1.1/doc/html/Text-Parsec-Combinator.html
 [examplecode]: https://gist.github.com/1899836
+[japanese]: http://delihiros.hatenablog.jp/entry/2012/06/12/174635
