@@ -65,4 +65,4 @@ Without even really trying we have done something that can be pretty hard in a l
 [part1]: http://FIX
 [lyahio]: http://learnyouahaskell.com/input-and-output
 [hoogle]: http://www.haskell.org/hoogle/
-[japanese]: http://delihiros.hatenablog.jp/entry/2012/06/12/174635
+[japanese]: http://delihiros.hatenablog.jp/entry/2012/06/12/185344
