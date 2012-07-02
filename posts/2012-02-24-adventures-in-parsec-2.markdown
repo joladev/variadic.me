@@ -60,6 +60,9 @@ There we are! This will print out each parse result, whether an error or the __L
 
 Without even really trying we have done something that can be pretty hard in a lot of languages, this script will run in constant space! Through the magic of laziness, each line read will be parsed, printed and then freed to be garbage collected without having to wait for its friends. That said, this is not an efficient implementation, and in a later tutorial we will look at how to optimize this.
 
+**Edit: this post was translated to Japanese by Hiroyuki Fudaba and available is [here][japanese].**
+
 [part1]: http://FIX
 [lyahio]: http://learnyouahaskell.com/input-and-output
 [hoogle]: http://www.haskell.org/hoogle/
+[japanese]: http://delihiros.hatenablog.jp/entry/2012/06/12/174635
