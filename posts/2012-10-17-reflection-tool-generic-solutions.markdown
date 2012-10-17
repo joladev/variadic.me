@@ -1,6 +1,6 @@
 ---
 title: Reflection as a tool for generic solutions
-date: October 15, 2012
+date: October 17, 2012
 tags: c#, reflection
 description: Using reflection to transform specific solutions to generic ones.
 ---
