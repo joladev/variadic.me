@@ -231,7 +231,7 @@ class VOTable
 
 As I mentioned it wouldn't be hard to break our code. Creating a `List<object>` with different data types would result in a crash, as the list of properties we grab off the first object would not all be available on all the rest of the objects. 
 
-Another way is using an empty list. That would make our code crash on `Type t = vos.ElementAt(0).GetType();` with index out of range exception, as there is no element at index 0. Even simpler would be just giving null as the parameter to MakeVOTable, crashing it with argument is null exception on GetType.
+Another way is using an empty list. That would make our code crash on `Type t = vos.ElementAt(0).GetType();` with index out of range exception, as there is no element at index 0. Even simpler would be just giving null as the parameter to MakeVOTable, crashing it with argument is null exception on ElementAt.
 
 There are solutions for each of these problems, but they are outside the scope of this article.
 
