@@ -135,4 +135,4 @@ This was the conclusion of my two part series on null and alternatives to it. I 
 
 _Please email me with questions or statements at <erik@variadic.me>._
 
-[maybe1]: http://variadic.me/posts/2012-10-26-maybe-bane-null.html
+[maybe1]: http://variadic.me/posts/2012-10-25-maybe-bane-null.html
