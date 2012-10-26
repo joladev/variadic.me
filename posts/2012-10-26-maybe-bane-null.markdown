@@ -1,6 +1,6 @@
 ---
 title: Maybe - The Bane of Null
-date: October 23, 2012
+date: October 26, 2012
 tags: csharp, haskell
 description: An alternative to null in computations that can fail.
 ---
