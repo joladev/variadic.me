@@ -1,9 +1,11 @@
 ---
 title: Maybe - The Bane of Null
-date: October 26, 2012
+date: October 25, 2012
 tags: csharp, haskell
 description: An alternative to null in computations that can fail.
 ---
+
+__*This is the first part of two, second is found [here][maybe2].*__
 
 We've all had it, the dreaded null reference exception. Using null to represent failed computations or a lack of an object reference is a norm in much of the programming world today. Java, C#, and many others use null even in system libraries. At the same time, there is a growing awareness of the very real cost of this practice. These languages are lauded for their type systems, allowing the compiler to infer many programmer mistakes at compile time. The null reference error is not one of these. It'll sneak in and wreak havoc, very often being difficult to track down, as the exception will most often not happen in the place where the null reference was given. It would be more than impractical to have the compiler make sure you check for null values or references in every single step of your code, for everything that is nullable. Especially when the developer might even be confident that his reference could never be null (in the end, all safety aside, we have to trust the developer).
 
@@ -99,10 +101,13 @@ In reality, one could simulate the Maybe class by simply returning a value wrapp
 
 Removing null from your API could severely reduce the number of hard to trace bugs, without needing added complexity. The `Maybe` data type as described here is only one possible implementation, but the idea behind it should be clear. Instead of sending a naked object reference, one should wrap it in an object containing information on whether or not one can expect the value to be null. An explicit requirement on the user of the code to unwrap the reference simply leads to better code.
 
-For more information, take a look at some of the languages that avoid null, like: [Scala][scala], [Rust][rust], [Haskell][haskell].
+For more information take a look at some of the languages that avoid null, like: [Scala][scala], [Rust][rust], [Haskell][haskell].
 
-_Please email me with questions or statements at <erik@variadic.me>._
+__*Continue on to part two here: [Adding Error Message][maybe2].*__
 
+_Don't hesitate to email me with questions or comments at <erik@variadic.me>._
+
+[maybe2]: http://variadic.me/posts/2012-10-26-maybe-adding-error-message.html
 [tonyhoare]: http://en.wikipedia.org/wiki/Nullable_type
 [rust]: http://www.rust-lang.org/
 [scala]: http://www.scala-lang.org/
