@@ -62,7 +62,7 @@ Without even really trying we have done something that can be pretty hard in a l
 
 **Edit: this post was translated to Japanese by Hiroyuki Fudaba and available is [here][japanese].**
 
-[part1]: http://FIX
+[part1]: http://variadic.me/posts/2012-02-24-adventures-in-parsec.html
 [lyahio]: http://learnyouahaskell.com/input-and-output
 [hoogle]: http://www.haskell.org/hoogle/
 [japanese]: http://delihiros.hatenablog.jp/entry/2012/06/12/185344
