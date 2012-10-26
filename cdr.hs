@@ -130,5 +130,6 @@ feedConfiguration = FeedConfiguration
     { feedTitle       = "variadic.me blog feed"
     , feedDescription = "blog feed"
     , feedAuthorName  = "Erik Kronberg"
+    , feedAuthorEmail = "erik@variadic.me"
     , feedRoot        = "http://variadic.me"
     }
