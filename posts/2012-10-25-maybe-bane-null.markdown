@@ -13,7 +13,7 @@ Why does null exist in the first place? When it causes so much trouble, why is i
 
 ### Are you telling me that there's an alternative?
 
-In fact, there are several. There are a number of programming languages that have avoided this trap, most using a variation on the same theme. Instead of returning an object reference that might be null, they will return an object wrapping the reference. Some of these languages eschew the use of null altogether, others just recommend the programmer never to use it. In either case, in order to get his hands on the object, the developer has to first check if the wrapper object is a successful computation or not. Many of these languages include a special syntax, a combination of pattern matching and deconstruction of the object, to simplify this process. The variations are called many different things, ranging from Maybe to Option, including types that also include error messages or other information.
+In fact, there are several. There are a number of programming languages that have avoided this trap, most using a variation on the same theme. Instead of returning an object reference that might be null, they will return an object wrapping the reference. Some of these languages eschew the use of null altogether, others just recommend the programmer never to use it. In either case, in order to get his hands on the object, the developer has to first check if the wrapper object is a successful computation or not. Many of these languages include a special syntax, a combination of pattern matching and deconstruction of the object, to simplify this process. The variations are called many different things, ranging from Maybe to Option, including types that also implement error messages or other information.
 
 Here is an example of this syntax in Haskell
 
@@ -34,7 +34,7 @@ Much of the syntax may be unintelligible for non-haskellers, but the important p
 
 Now, in languages like C# or Java we don't have this fancy pattern matching syntax, but we can still wrap values and this way require the caller to check the value. Basically, what we're doing is telling the caller that this computation might fail, using the type system.
 
-Note, the following example is a proof of concept, not an indication of best practice. In C# one common solution is the TryParse technique used by eg the platform Dictionary implementation. It can be a bit obscure in its use, because of the `out` keyword, but avoids the creation of one extra object reference. It also should not be hard to port this to Java.
+Note, the following example is a proof of concept, not an indication of best practice. In C# one common solution is the TryParse technique used by eg the platform Dictionary implementation. It can be a bit obscure in its use, because of the `out` keyword, but avoids the creation of one extra object reference. It also should not be hard to port the example to Java.
 
 ~~~~~{.cs}
 class Maybe <T>
