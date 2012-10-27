@@ -34,7 +34,7 @@ Much of the syntax may be unintelligible for non-haskellers, but the important p
 
 Now, in languages like C# or Java we don't have this fancy pattern matching syntax, but we can still wrap values and this way require the caller to check the value. Basically, what we're doing is telling the caller that this computation might fail, using the type system.
 
-Note, the following example is a proof of concept, not an indication of best practice. In C# one common solution is the TryParse technique used by eg the platform Dictionary implementation. It can be a bit obscure in its use, because of the `out` keyword, but avoids the creation of one extra object reference. It also should not be hard to port the example to Java.
+Note, the following example is a proof of concept, not necessarily an indication of best practice. In C# one common solution is the TryParse technique used by eg the platform Dictionary implementation. It can be a bit obscure in its use, because of the `out` keyword, but avoids the creation of one extra object reference. It also should not be hard to port the example to Java.
 
 ~~~~~{.cs}
 class Maybe <T>
@@ -93,7 +93,7 @@ class Test
 }
 ~~~~~
 
-The astute reader will of course notice that the user of this Maybe class could just ignore the Success property and get a null reference even with Maybe. The truth of the matter is that null is in the language and we can't prevent that, we can just try to avoid relying on it. Returning a nullable reference is bad coding practice. It requires the caller to always remember to check for null, even though the method itself gives no indication of this. Adding Maybe to the method signature can serve as a reminder, as it will force the caller to explicitly unwrap the result value.
+The astute reader will of course notice that the user of this Maybe class could just ignore the Success property and get a null reference even with Maybe. The truth of the matter is that null is in the language and we can't prevent that, we can just try to avoid relying on it. __Returning a nullable reference is bad coding practice__. It requires the caller to always remember to check for null, even though the method itself gives no indication of this. Adding Maybe to the method signature can serve as a reminder, as it will force the caller to explicitly unwrap the result value.
 
 ### Taking another perspective
 
@@ -105,7 +105,7 @@ Removing null from your API could severely reduce the number of hard to trace bu
 
 For more information take a look at some of the languages that avoid null, like: [Scala][scala], [Rust][rust], [Haskell][haskell].
 
-__*Continue on to part two here: [Adding Error Message][maybe2].*__
+__*Continue on to part two here: [Adding en Error Message][maybe2].*__
 
 _Don't hesitate to email me with questions or comments at <erik@variadic.me>._
 
