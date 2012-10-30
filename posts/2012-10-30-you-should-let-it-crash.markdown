@@ -39,4 +39,4 @@ It's naive to think that it would never happen to you, but the specific examples
 
 Just let it crash.
 
-_Please email me with questions or statements at <erik@variadic.me>._
+_Please email me with expressions or statements at <erik@variadic.me>._
