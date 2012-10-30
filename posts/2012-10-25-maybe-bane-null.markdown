@@ -105,7 +105,7 @@ Removing null from your API could severely reduce the number of hard to trace bu
 
 For more information take a look at some of the languages that avoid null, like: [Scala][scala], [Rust][rust], [Haskell][haskell].
 
-__*Continue on to part two here: [Adding en Error Message][maybe2].*__
+__*Continue on to part two here: [Adding an Error Message][maybe2].*__
 
 _Don't hesitate to email me with questions or comments at <erik@variadic.me>._
 
