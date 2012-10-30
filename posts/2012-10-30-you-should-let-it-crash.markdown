@@ -35,7 +35,7 @@ That's the problem right there. You don't know the problem. You don't know what 
 
 Even worse, consider having this in a banking web application. In order to determine who has access to what accounts, it includes an elaborate access control system. Every other full moon that occurs on a Tuesday with no rain, something gets stuck in the machinery and instead of erroring out, it will incorrectly give a session access to the wrong accounts. All because some hapless code monkey was too lazy to track down the specific exceptions that were possible, and instead wrote a catch all clause, figuring it would probably not matter.
 
-It's naive to think that it would never happen to you, but the specific examples don't even matter. If an exception happens and you don't know how to fix it, your application state is corrupted. You should not allow it to continue running. Apologize to the user and grab what debug information you can. Use it to update your app, make it better, try to catch more specific exceptions. But don't let your application go zombie.
+It's naive to think that it would never happen to you, but the specific examples don't even matter. If an exception happens and you don't know how to fix it, your application state is corrupted. You should not allow it to continue running. Apologize to the user and grab what debug information you can, let the application go down in a graceful way. Use the information to update your app, make it better, try to catch more specific exceptions. But don't let your application go zombie.
 
 Just let it crash.
 
