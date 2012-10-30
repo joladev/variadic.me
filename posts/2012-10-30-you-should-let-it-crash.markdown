@@ -1,6 +1,6 @@
 ---
 title: You should let it crash
-date: October 23, 2012
+date: October 30, 2012
 tags: csharp, java
 description: Contrary to intution, crashing is actually a good thing. Here's why you should never catch all.
 ---
