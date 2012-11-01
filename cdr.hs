@@ -10,7 +10,7 @@ import Data.Monoid (mempty, mconcat)
 import Hakyll
 
 main :: IO ()
-main = hakyll $ do
+main = hakyllWith config $ do
 
     -- Render the 404 page, no relativized urls.
     match "404.html" $ do
@@ -132,4 +132,10 @@ feedConfiguration = FeedConfiguration
     , feedAuthorName  = "Erik Kronberg"
     , feedAuthorEmail = "erik@variadic.me"
     , feedRoot        = "http://variadic.me"
+    }
+
+config :: HakyllConfiguration
+config = defaultHakyllConfiguration
+    { deployCommand = "rsync --checksum --delete -ave 'ssh' \
+                       \_site/* variadic@variadic.me:variadic.me"
     }
