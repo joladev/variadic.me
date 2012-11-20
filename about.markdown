@@ -4,9 +4,9 @@ title: About
 
 ## About me
 
-I am a student of information systems design at Lund University, Sweden. Currently on my third and last year of studies, I work on a few projects of my own. I like Haskell, Clojure, Python, in that order, but I also have some experience in Java and C#. I work as a teaching assistant, part time lab instructor and mentor at my department.
+I am a student of information systems design at Lund University, Sweden, where I am also employed as teaching assistant, lab assistant and mentor. Currently on my third and last year of studies, I work on a few projects of my own. I have a fixation with programming languages and I've spent quite some time trying a lot of them out. Each one widens your understanding by showing a problem and solution from a slightly different perspective. Some of the ones that had the strongest impact on me are Haskell, Clojure, Python, as well as books such as [The Little Schemer][tls].
 
-This blog will probably just feature basic write ups of small time projects in whatever technologies I got worked up about at the moment. There is often a serious lack of material on the step just between learning a language and being able to build advanced applications in it, and that's the area I'll be aiming for in my posts. The source code for this site is [available for reference on github][variadicgh].
+This blog will feature everything from opinionated articles on development practices to basic write ups of small time projects in whatever technologies I got worked up about at the moment. There is often a serious lack of material on the step just between learning a language and being able to build advanced applications in it, and that's one of the areas I'll be aiming for in my posts. The source code for this site is [available for reference on github][variadicgh].
 
 Feel free to contact me at <erik@variadic.me> or check out my profile on [Careers 2.0][careers]. I enjoy emails. And cats.
 
@@ -24,3 +24,4 @@ Feel free to contact me at <erik@variadic.me> or check out my profile on [Career
 [linode]: http://www.linode.com/?r=149bc10682eeaffb72d9bd6e7a4e722c5687768a
 [variadicgh]: https://github.com/eakron/variadic.me
 [careers]: http://careers.stackoverflow.com/eakron
+[tls]: http://mitpress.mit.edu/books/little-schemer
