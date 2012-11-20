@@ -13,7 +13,7 @@ Feel free to contact me at <erik@variadic.me> or check out my profile on [Career
 ## Colophon
 
 - Site generator: [Hakyll][hakyll]
-- Hosting: [Linode VPS (referral link)][linode]
+- Hosting: [Linode VPS][linode] (referral link)
 - Editor: [Sublime Text 2][subl]
 - Web server: [Nginx][nginx]
 
