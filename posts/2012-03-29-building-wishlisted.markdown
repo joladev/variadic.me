@@ -5,13 +5,15 @@ tags: clojure, noir
 description: Description of the design and architecture of wishlisted.org
 ---
 
+**EDIT: Wishlisted.org is no longer live.**
+
 __TL;DR__ I made [wishlisted.org][wishlisted] in Clojure. Here's the [source code][github].
 
 ### What is wishlisted.org?
 
 I built this site to test myself and to try out a non-trivial example of a Clojure webapp, together with a very good [friend][stinaq]. I don't necessarily feel it will solve the world's problems, but I'm still gonna give you the pitch:
 
-Organizing wishlists can be a logistical nightmare, you're lucky if nobody buys the same thing. Keeping track of everything on paper is a hassle, making sure everybody gets their copies is worse. Once printed they can't be updated. Some web based stores let you create wishlists on their site, which is convenient, but if you are using multiple stores well… Back to square one. It's time for one single place to put it all, with simple sharing and updating. Check out [wishlisted.org][wishlisted].
+Organizing wishlists can be a logistical nightmare, you're lucky if nobody buys the same thing. Keeping track of everything on paper is a hassle, making sure everybody gets their copies is worse. Once printed they can't be updated. Some web based stores let you create wishlists on their site, which is convenient, but if you are using multiple stores well… Back to square one. It's time for one single place to put it all, with simple sharing and updating.
 
 Something like that.
 
@@ -86,17 +88,16 @@ _Join the conversation at [Reddit][reddit] or email me at <erik@variadic.me>._
 [4clojure]: http://www.4clojure.com/
 [hiccup]: https://github.com/weavejester/hiccup
 [lein]: https://github.com/technomancy/leiningen
-[cljs]: https://github.com/eakron/wishlistd/blob/develop/src/wishlistd/cljs/main.cljs
+[cljs]: https://github.com/eakron/wishlisted/blob/develop/src/wishlistd/cljs/main.cljs
 [jayq]: https://github.com/ibdknox/jayq
 [crate]: https://github.com/ibdknox/crate
 [fetch]: https://github.com/ibdknox/fetch
 [hastebin]: http://hastebin.com/
 [johncrepezzi]: http://www.seejohncode.com/
-[github]: https://github.com/eakron/wishlistd
+[github]: https://github.com/eakron/wishlisted
 [django]: https://www.djangoproject.com/
 [noir]: http://webnoir.org/
 [korma]: http://sqlkorma.com/
 [pgsql]: http://www.postgresql.org/
 [stinaq]: http://stinaq.se/
 [tjoc]: http://fogus.me/
-[wishlisted]: http://wishlisted.org/
