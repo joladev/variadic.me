@@ -93,3 +93,20 @@ namespace LruDictionary
 ~~~~~
 
 The end result is that we've taken care of all the three main steps involved in keeping track of our recent entries, and done so without exposing any of the internal complexity. Using it is as simple as creating an instance and adding entries to it. 
+
+~~~~~{.cs}
+var lrud = new LruDictionary<string, string>();
+lrud.Add("key1", "value1");
+lrud.Add("key2", "value2");
+lrud.Add("key3", "value3");
+lrud.Add("key1", "value1");
+
+lrud.Values.ForEach(Console.WriteLine);
+// => value1
+// => value3
+// => value2
+~~~~~
+
+One of the most important tools in a programmer's tool belt is the data structure. Working with platforms like Java and .NET makes so many of them available that in practice we mostly pick and choose the appropriate one. But once in a while the opportunity presents itself to effectively encapsulate code in the form of a custom data structure. Assuming the use of it is straight forward enough, it will lead to nice and clean code.
+
+And lets face it, the main motivation for object oriented code in the first place is encapsulation.
