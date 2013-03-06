@@ -92,4 +92,4 @@ namespace LruDictionary
 }
 ~~~~~
 
-The end result is that we've taken care of all the three main steps involved in keeping track of our recent entries, and done so without exposing any of the internal complexity. Using it is a simple as creating an instance and adding entries to it. 
+The end result is that we've taken care of all the three main steps involved in keeping track of our recent entries, and done so without exposing any of the internal complexity. Using it is as simple as creating an instance and adding entries to it. 
