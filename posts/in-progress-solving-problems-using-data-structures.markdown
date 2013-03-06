@@ -109,4 +109,4 @@ lrud.Values.ForEach(Console.WriteLine);
 
 One of the most important tools in a programmer's tool belt is the data structure. Working with platforms like Java and .NET makes so many of them available that in practice we mostly pick and choose the appropriate one. But once in a while the opportunity presents itself to effectively encapsulate code in the form of a custom data structure. Assuming the use of it is straight forward enough, it will lead to nice and clean code.
 
-And lets face it, the main motivation for object oriented code in the first place is encapsulation.
+And let's face it, the main motivation for object oriented code in the first place is encapsulation.
