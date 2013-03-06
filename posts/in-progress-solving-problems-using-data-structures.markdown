@@ -7,7 +7,7 @@ description: In this article I show how a data structure can be used to encapsul
 
 *__TL;DR__: In this article I show how a data structure can be used to encapsulate implementation details and lead to nice clean code.*
 
-Recently I came across a problem that I know has been solved many times but I've never really looked at before. The goal was to be able to show the last 5 entries that had been accessed, ordered by access. This also assumes that each entry can only be shown once, even if accessed multiple times.
+Recently I came across a problem that I know has been solved many times but I've never really looked into before. The goal was to be able to show the last 5 entries that had been accessed, ordered by access. This also assumes that each entry can only be shown once, even if accessed multiple times.
 
 Broken down in steps, we need this functionality:
 - When an entry is accessed, this entry should be taken to the top of the list.
