@@ -12,7 +12,7 @@ Recently I came across a problem that I know has been solved many times but I've
 Broken down in steps, we need this functionality:
 - When an entry is accessed, this entry should be taken to the top of the list.
 - If the entry is already in the list, move it to the top.
-- If a new entry is added to the list, and it has grown beyond 5, remove the least recently viewed entry.
+- If a new entry is added to the list, and it has grown beyond our max size, remove the least recently viewed entry.
 
 This was for a web service, so my first thought was to just implement a new method that handled all that stuff and then persisted it as a list to the cache (database would be fine too, but this data is not critical). Just as soon as I had that idea, I got a bad feeling about it. If I really kept this data in a regular list, I'd have to handle uniqueness myself. And if I kept it in a Dictionary or Set, I'd have to handle order myself. That's when it hit me. __I finally have a legitimate reason to make my own data structure.__
 
