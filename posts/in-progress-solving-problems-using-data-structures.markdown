@@ -1,6 +1,6 @@
 ---
 title: Solving Problems Using Data Structures
-date: TBD
+date: March 6, 2013
 tags: csharp, java
 description: In this article I show how a data structure can be used to encapsulate implementation details and lead to nice clean code.
 ---
