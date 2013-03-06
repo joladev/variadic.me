@@ -5,7 +5,7 @@ tags: csharp, java
 description: In this article I show how a data structure can be used to encapsulate implementation details and lead to nice clean code.
 ---
 
-**_TL;DR_: In this article I show how a data structure can be used to encapsulate implementation details and lead to nice clean code.**
+*__TL;DR__: In this article I show how a data structure can be used to encapsulate implementation details and lead to nice clean code.*
 
 Recently I came across a problem that I know has been solved many times but I've never really looked at before. The goal was to be able to show the last 5 entries that had been accessed, ordered by access. This also assumes that each entry can only be shown once, even if accessed multiple times.
 
@@ -14,11 +14,11 @@ Broken down in steps, we need this functionality:
 - If the entry is already in the list, move it to the top.
 - If a new entry is added to the list, and it has grown beyond 5, remove the least recently viewed entry.
 
-This was for a web service, so my first thought was to just implement a new method that handled all that stuff and then persisted it as a list to the cache (database would be fine too, but this data is not critical). Just as soon as I had that idea, I got a bad feeling about it. If I really kept this data in a regular list, I'd have to handle uniqueness myself. And if I kept it in a Dictionary or Set, I'd have to handle order myself. That's when it hit me. _I finally have a legitimate reason to make my own data structure._
+This was for a web service, so my first thought was to just implement a new method that handled all that stuff and then persisted it as a list to the cache (database would be fine too, but this data is not critical). Just as soon as I had that idea, I got a bad feeling about it. If I really kept this data in a regular list, I'd have to handle uniqueness myself. And if I kept it in a Dictionary or Set, I'd have to handle order myself. That's when it hit me. __I finally have a legitimate reason to make my own data structure.__
 
 ### The birth of the terribly named data structure
 
-This is the basic jist of the implementation I ended up with. It lacks completeness, this is just the parts that are required for the use case. Efficiency was never a prime concern, there's no doubt plenty of room for optimization.
+This is the basic jist of the implementation I ended up with. It lacks completeness, this is just the parts that are required for the use case. Efficiency was never a prime concern, there's no doubt plenty of room for optimization. The name refers to its behavior as a Dictionary and the fact that it expels the least recently used entries when it grows beyond the max size.
 
 ~~~~~{.cs}
 namespace LruDictionary
