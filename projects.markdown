@@ -12,7 +12,7 @@ This site was made using [Hakyll][hakyll], and the code is available for referen
 
 AJAX webapp built in Clojure for handling wishlists, no longer up. Source code available [here][wlgithub]. Design by [Stina Qvarnström][stinaq].
 
-[stinaq]: http://stinaq.se
+[stinaq]: http://stinaq.me
 [wlgithub]: https://github.com/eakron/wishlisted
 [hakyll]: http://jaspervdj.be/hakyll/
 [variadicgh]: https://github.com/eakron/variadic.me
