@@ -11,7 +11,7 @@ __TL;DR__ I made wishlisted in Clojure. Here's the [source code][github].
 
 I built this site to test myself and to try out a non-trivial example of a Clojure webapp, together with a very good [friend][stinaq]. I don't necessarily feel it will solve the world's problems, but I'm still gonna give you the pitch:
 
-Organizing wishlists can be a logistical nightmare, you're lucky if nobody buys the same thing. Keeping track of everything on paper is a hassle, making sure everybody gets their copies is worse. Once printed they can't be updated. Some web based stores let you create wishlists on their site, which is convenient, but if you are using multiple stores well… Back to square one. It's time for one single place to put it all, with simple sharing and updating. Check out [wishlisted.org][wishlisted].
+Organizing wishlists can be a logistical nightmare, you're lucky if nobody buys the same thing. Keeping track of everything on paper is a hassle, making sure everybody gets their copies is worse. Once printed they can't be updated. Some web based stores let you create wishlists on their site, which is convenient, but if you are using multiple stores well… Back to square one. It's time for one single place to put it all, with simple sharing and updating.
 
 Something like that.
 
