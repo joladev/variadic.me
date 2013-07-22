@@ -7,7 +7,7 @@ description: Description of the design and architecture of wishlisted.org
 
 **EDIT: Wishlisted.org is no longer live.**
 
-__TL;DR__ I made [wishlisted.org][wishlisted] in Clojure. Here's the [source code][github].
+__TL;DR__ I made wishlisted in Clojure. Here's the [source code][github].
 
 ### What is wishlisted.org?
 
