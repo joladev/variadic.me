@@ -19,7 +19,7 @@ A naive implementation might look something like this.
 
 ~~~~~{.javascript}
 angular.module('services', [])
-  .factory('State', function () {
+  .factory('state', function () {
     var state;
 
     return {
@@ -51,13 +51,13 @@ So lets try again. In steps, what we want to do is this:
 
 ~~~~~{.javascript}
 angular.module('services', [])
-  .factory('State', function ($rootScope) {
+  .factory('state', function ($rootScope) {
     'use strict';
 
     var state;
 
     var broadcast = function (state) {
-      $rootScope.$broadcast('State.Update', state);
+      $rootScope.$broadcast('state.update', state);
     };
 
     var update = function (newState) {
@@ -80,10 +80,10 @@ And on the controller side:
 
 ~~~~~{.javascript}
 angular.module('controllers', ['services'])
-  .factory('MainCtrl', function ($scope, State) {
+  .factory('MainCtrl', function ($scope, state) {
     $scope.state = State.state;
     
-    $scope.$on('State.Update', function (newState) {
+    $scope.$on('state.update', function (newState) {
       $scope.state = newState;
     });
     
@@ -96,7 +96,7 @@ As a convenience, we could move the boilerplate of event attaching to the State 
 ~~~~~{.javascript}
 // in the service
 var onUpdate = function ($scope, callback) {
-  $scope.$on('State.Update', function (newState) {
+  $scope.$on('state.update', function (newState) {
     callback(newState);
   });
 };
@@ -121,7 +121,7 @@ I got some great feedback on Reddit and I am here adding a simplified version of
 
 ~~~~~{.javascript}
 angular.module('services', [])
-  .factory('State', function () {
+  .factory('state', function () {
     'use strict';
 
     var state = {};
@@ -136,8 +136,8 @@ Using it our controller looks more like this.
 
 ~~~~~{.javascript}
 angular.module('controllers', ['services'])
-  .factory('MainCtrl', function ($scope, State) {
-    $scope.state = State.state;
+  .factory('MainCtrl', function ($scope, state) {
+    $scope.state = state.state;
   });
 ~~~~~
 
@@ -147,8 +147,8 @@ In most cases this is plenty! If you need to react to changes in the state objec
 
 ~~~~~{.javascript}
 angular.module('controllers', ['services'])
-  .factory('MainCtrl', function ($scope, State) {
-    $scope.state = State.state;
+  .factory('MainCtrl', function ($scope, state) {
+    $scope.state = state.state;
 
     $scope.$watch('State.state', function (newVal, oldVal) {
       // your code here
