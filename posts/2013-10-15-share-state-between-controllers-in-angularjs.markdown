@@ -5,6 +5,8 @@ tags: javascript, angularjs
 description: Share state between controllers in AngularJS using a State Service. 
 ---
 
+_Edit: Got some nice input from Reddit and added a simplified version which covers most cases to the bottom of the article._
+
 [AngularJS][angularjs] is one of the best frameworks I have ever come in contact with. It is easy to learn (although there is a small bump right at the start, figuring out the whole modular thing, leading many beginners to just create a single controller and putting everything in it). But you get over it fast enough, start breaking stuff up into contained cohesive units. And it's amazing. Suddenly, JavaScript, the language that has before seemed impossible to be given structure, has it. Instant enlightenment. [Dependency injection][di] is the single greatest invention by man. [Miško Hevery][misko] is a god.
 
 You start punching out mad code. You set up services, filters, directives and a whole bunch of controllers. It's all gorgeous. AngularJS makes you write good code. Everything sort of naturally falls into place and even as the code base grows, it never gets unweildy. When you, in brief moments of insanity, try to work against the framework, it prompty punishes you. Not because it is cruel, but to protect you from making architectural mistakes. Monstrosities in unmaintainability. You chant the mantra: "testability, dependency injection, modularity", and figure it out. You didn't need to create a class in order to contain that piece of conversion logic, you needed a filter. Everything is right again.
@@ -115,7 +117,7 @@ Please don't hesitate to throw me an email at <erik@variadic.me> or a tweet at [
 
 ## Edit
 
-By feedback from Reddit I am here adding a simplified version of the service which simply shares an object. By using `$watch` on this object, we can spot changes and react to these, or just simply binding it on the scope.
+I got some great feedback on Reddit and I am here adding a simplified version of the service which simply shares an object. By using `$watch` on this object, we can spot changes and react to these, or just simply binding it on the scope.
 
 ~~~~~{.javascript}
 angular.module('services', [])
@@ -138,6 +140,8 @@ angular.module('controllers', ['services'])
     $scope.state = State.state;
   });
 ~~~~~
+
+The "big" difference here will be in the markup, where you refer to your state, eg a property called username, as `state.username` rather than just `username`.
 
 In most cases this is plenty! If you need to react to changes in the state object, you can `$watch`.
 
