@@ -150,7 +150,7 @@ angular.module('controllers', ['services'])
   .factory('MainCtrl', function ($scope, state) {
     $scope.state = state.state;
 
-    $scope.$watch('state.state', function (newVal, oldVal) {
+    $scope.$watch('state', function (newVal, oldVal) {
       // your code here
     });
   });
