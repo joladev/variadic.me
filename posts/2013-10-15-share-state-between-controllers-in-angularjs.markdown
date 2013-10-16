@@ -2,7 +2,7 @@
 title: Share state between controllers in AngularJS
 date: Oct 15, 2013
 tags: javascript, angularjs
-description: Share state between controllers in AngularJS using a State Service. 
+description: Share state between controllers in AngularJS using a state service. 
 ---
 
 _Edit: Got some nice input from Reddit and added a simplified version which covers most cases to the bottom of the article._
@@ -41,7 +41,7 @@ So updating the name property of this "state service" does not propagate changes
 
 ## Events
 
-Luckily, we have events. In AngularJS, these are transmitted through the rootScope and bubble up through all scopes. Using `$scope.$on` we can attach listeners to these and react to changes in our State service!
+Luckily, we have events. In AngularJS, these are transmitted through the rootScope and bubble up through all scopes. Using `$scope.$on` we can attach listeners to these and react to changes in our state service!
 
 So lets try again. In steps, what we want to do is this:
 
@@ -81,17 +81,17 @@ And on the controller side:
 ~~~~~{.javascript}
 angular.module('controllers', ['services'])
   .factory('MainCtrl', function ($scope, state) {
-    $scope.state = State.state;
+    $scope.state = state.state;
     
     $scope.$on('state.update', function (newState) {
       $scope.state = newState;
     });
     
-    $scope.update = State.update;
+    $scope.update = state.update;
   });
 ~~~~~
 
-As a convenience, we could move the boilerplate of event attaching to the State manager. Something like this:
+As a convenience, we could move the boilerplate of event attaching to the state manager. Something like this:
 
 ~~~~~{.javascript}
 // in the service
@@ -102,7 +102,7 @@ var onUpdate = function ($scope, callback) {
 };
 
 // and in the controller
-State.onUpdate($scope, function (newState) {
+state.onUpdate($scope, function (newState) {
   $scope.state = newState;
 };
 ~~~~~
@@ -150,7 +150,7 @@ angular.module('controllers', ['services'])
   .factory('MainCtrl', function ($scope, state) {
     $scope.state = state.state;
 
-    $scope.$watch('State.state', function (newVal, oldVal) {
+    $scope.$watch('state.state', function (newVal, oldVal) {
       // your code here
     });
   });
