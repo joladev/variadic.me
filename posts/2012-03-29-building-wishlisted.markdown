@@ -86,13 +86,13 @@ _Join the conversation at [Reddit][reddit] or email me at <erik@variadic.me>._
 [4clojure]: http://www.4clojure.com/
 [hiccup]: https://github.com/weavejester/hiccup
 [lein]: https://github.com/technomancy/leiningen
-[cljs]: https://github.com/eakron/wishlistd/blob/develop/src/wishlistd/cljs/main.cljs
+[cljs]: https://github.com/eakron/wishlisted/blob/develop/src/wishlisted/cljs/main.cljs
 [jayq]: https://github.com/ibdknox/jayq
 [crate]: https://github.com/ibdknox/crate
 [fetch]: https://github.com/ibdknox/fetch
 [hastebin]: http://hastebin.com/
 [johncrepezzi]: http://www.seejohncode.com/
-[github]: https://github.com/eakron/wishlistd
+[github]: https://github.com/eakron/wishlisted
 [django]: https://www.djangoproject.com/
 [noir]: http://webnoir.org/
 [korma]: http://sqlkorma.com/
