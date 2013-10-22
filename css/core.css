@@ -40,7 +40,7 @@ h1 {
 
 h2 {
 	font-size:1.8em;
-	margin-bottom:20px;
+	margin-bottom:10px;
 }
 
 
@@ -131,4 +131,9 @@ a:hover {
 	margin-left:50px;
 
 	font-size:5em;
+}
+
+.tags {
+	font-size: 1em;
+	font-style: italic;
 }
