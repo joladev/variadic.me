@@ -2,7 +2,7 @@
 title: Share state between controllers in AngularJS
 date: Oct 15, 2013
 tags: javascript, angularjs
-description: Share state between controllers in AngularJS using a State Service. 
+description: Share state between controllers in AngularJS using a state service. 
 ---
 
 _Edit: Got some nice input from Reddit and added a simplified version which covers most cases to the bottom of the article._
@@ -19,7 +19,7 @@ A naive implementation might look something like this.
 
 ~~~~~{.javascript}
 angular.module('services', [])
-  .factory('State', function () {
+  .factory('state', function () {
     var state;
 
     return {
@@ -41,7 +41,7 @@ So updating the name property of this "state service" does not propagate changes
 
 ## Events
 
-Luckily, we have events. In AngularJS, these are transmitted through the rootScope and bubble up through all scopes. Using `$scope.$on` we can attach listeners to these and react to changes in our State service!
+Luckily, we have events. In AngularJS, these are transmitted through the rootScope and bubble up through all scopes. Using `$scope.$on` we can attach listeners to these and react to changes in our state service!
 
 So lets try again. In steps, what we want to do is this:
 
@@ -51,13 +51,13 @@ So lets try again. In steps, what we want to do is this:
 
 ~~~~~{.javascript}
 angular.module('services', [])
-  .factory('State', function ($rootScope) {
+  .factory('state', function ($rootScope) {
     'use strict';
 
     var state;
 
     var broadcast = function (state) {
-      $rootScope.$broadcast('State.Update', state);
+      $rootScope.$broadcast('state.update', state);
     };
 
     var update = function (newState) {
@@ -80,29 +80,29 @@ And on the controller side:
 
 ~~~~~{.javascript}
 angular.module('controllers', ['services'])
-  .factory('MainCtrl', function ($scope, State) {
-    $scope.state = State.state;
+  .factory('MainCtrl', function ($scope, state) {
+    $scope.state = state.state;
     
-    $scope.$on('State.Update', function (newState) {
+    $scope.$on('state.update', function (newState) {
       $scope.state = newState;
     });
     
-    $scope.update = State.update;
+    $scope.update = state.update;
   });
 ~~~~~
 
-As a convenience, we could move the boilerplate of event attaching to the State manager. Something like this:
+As a convenience, we could move the boilerplate of event attaching to the state manager. Something like this:
 
 ~~~~~{.javascript}
 // in the service
 var onUpdate = function ($scope, callback) {
-  $scope.$on('State.Update', function (newState) {
+  $scope.$on('state.update', function (newState) {
     callback(newState);
   });
 };
 
 // and in the controller
-State.onUpdate($scope, function (newState) {
+state.onUpdate($scope, function (newState) {
   $scope.state = newState;
 };
 ~~~~~
@@ -121,7 +121,7 @@ I got some great feedback on Reddit and I am here adding a simplified version of
 
 ~~~~~{.javascript}
 angular.module('services', [])
-  .factory('State', function () {
+  .factory('state', function () {
     'use strict';
 
     var state = {};
@@ -136,8 +136,8 @@ Using it our controller looks more like this.
 
 ~~~~~{.javascript}
 angular.module('controllers', ['services'])
-  .factory('MainCtrl', function ($scope, State) {
-    $scope.state = State.state;
+  .factory('MainCtrl', function ($scope, state) {
+    $scope.state = state.state;
   });
 ~~~~~
 
@@ -147,10 +147,10 @@ In most cases this is plenty! If you need to react to changes in the state objec
 
 ~~~~~{.javascript}
 angular.module('controllers', ['services'])
-  .factory('MainCtrl', function ($scope, State) {
-    $scope.state = State.state;
+  .factory('MainCtrl', function ($scope, state) {
+    $scope.state = state.state;
 
-    $scope.$watch('State.state', function (newVal, oldVal) {
+    $scope.$watch('state', function (newVal, oldVal) {
       // your code here
     });
   });
