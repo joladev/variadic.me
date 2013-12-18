@@ -2,7 +2,7 @@
 
 {-
 
-Build script for variadic.me using Hakyll 4.1
+Build script for variadic.me using Hakyll 4.4
 
 Based on Jasper Van der Jeugt's blog <http://jaspervdj.be>, with 
 minor alterations.
@@ -39,6 +39,11 @@ main = hakyllWith config $ do
 
     -- Copy JS
     match "js/*" $ do
+        route idRoute
+        compile copyFileCompiler
+
+    -- Copy Fonts
+    match "fonts/*" $ do
         route idRoute
         compile copyFileCompiler
 
@@ -109,7 +114,7 @@ main = hakyllWith config $ do
             >>= loadAndApplyTemplate "templates/default.html" defaultContext
             >>= relativizeUrls
 
-    -- Render the 404 page, we don't relativize URL's here.
+    -- Render the 404 page, we don't relativize URLs here.
     match "404.html" $ do
         route idRoute
         compile $ pandocCompiler
