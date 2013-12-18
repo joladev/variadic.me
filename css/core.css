@@ -31,6 +31,12 @@ ul.nav {
 	padding:40px 50px;
 }
 
+@media screen and (max-width: 768px) {
+	.content {
+		padding:40px 10px;
+	}
+}
+
 .content h2 {
 	padding-left:10px;
 	font-family:FiraLight;
@@ -38,7 +44,6 @@ ul.nav {
 
 .metadata {
 	text-align: right;
-	padding-right:50px;
 	padding-bottom:20px;
 }
 
@@ -70,7 +75,9 @@ a:hover {
 	text-decoration:none;
 }
 
-.nav a:hover {
+.nav a:hover, 
+.nav a:active,  
+.nav a:focus {
 	color:#222;
 }
 
