@@ -1,0 +1,54 @@
+@font-face {
+	font-family: FiraLight;
+	src: url('../fonts/FiraSans-Light.woff');
+} 
+
+.content .posts li {
+	list-style:none;
+	padding:5px 10px;
+}
+
+.content {
+	padding:40px 0;
+}
+
+.page-header h1 {
+	font-family:FiraLight;
+}
+
+a {
+	color:#222;
+	text-decoration:underline;
+}
+
+a:hover {
+	color:#555;
+}
+
+.nav a {
+	text-decoration:none;
+}
+
+.nav a:hover {
+	color:#222;
+}
+
+.header {
+	border-bottom:1px solid #eee;
+	border-top:1px solid #eee;
+}
+
+.page-header {
+	border-bottom:none;
+}
+
+.page-header a {
+	text-decoration:none;
+}
+
+.bottom {
+	text-align: center;
+	padding:20px;
+	font-style:italic;
+	color:#666;
+}
