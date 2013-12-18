@@ -1,7 +1,12 @@
 @font-face {
 	font-family: "FiraLight";
 	src: url('../fonts/FiraSans-Light.woff');
-} 
+}
+
+@font-face {
+	font-family: "FiraRegular";
+	src: url('../fonts/FiraSans-Regular.woff');
+}
 
 ul.nav {
 	display:flex;
@@ -28,6 +33,24 @@ ul.nav {
 
 .content h2 {
 	padding-left:10px;
+	font-family:FiraLight;
+}
+
+.metadata {
+	text-align: right;
+	padding-right:50px;
+	padding-bottom:20px;
+}
+
+.tags {
+	font-weight: bold;
+	padding-right:5px;
+}
+
+.date {
+	font-style:italic;
+	color:#222;
+	padding-left:5px;
 }
 
 .page-header h1 {
@@ -69,4 +92,8 @@ a:hover {
 	padding:20px;
 	font-style:italic;
 	color:#666;
+}
+
+.date {
+	margin-bottom:10px;
 }

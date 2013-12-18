@@ -2,8 +2,6 @@
 title: Projects
 ---
 
-## Projects
-
 ### variadic.me
 
 This site was made using [Hakyll][hakyll], and the code is available for reference [here][variadicgh].
