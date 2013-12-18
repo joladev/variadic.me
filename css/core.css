@@ -23,11 +23,16 @@ ul.nav {
 }
 
 .content {
-	padding:40px 0;
+	padding:40px 50px;
+}
+
+.content h2 {
+	padding-left:10px;
 }
 
 .page-header h1 {
 	font-family:FiraLight;
+	padding-left: 40px;
 }
 
 a {
