@@ -90,6 +90,10 @@ p.metadata {
 	padding-left:5px;
 }
 
+.tags a {
+	text-decoration:none;
+}
+
 .date {
 	font-style:italic;
 	color:#222;
