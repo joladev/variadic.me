@@ -8,6 +8,14 @@
 	src: url('../fonts/FiraSans-Regular.woff');
 }
 
+body {
+	font-size:16px;
+}
+
+h2 {
+	font-size:36px;
+}
+
 ul.nav {
 	display:flex;
 }
@@ -32,13 +40,21 @@ ul.nav {
 	color:#666;
 }
 
+.head {
+	padding:0 50px;
+}
+
 .content {
-	padding:40px 40px;
+	padding:30px 50px;
 }
 
 @media screen and (max-width: 768px) {
 	.content {
-		padding:40px 10px;
+		padding:10px 10px;
+	}
+
+	.head {
+		padding:0 10px;
 	}
 }
 
@@ -47,24 +63,27 @@ ul.nav {
 }
 
 .metadata {
-	text-align: right;
 	padding-bottom:20px;
+	padding-left:2px;
+}
+
+p.metadata {
+	font-size:14px;
 }
 
 .tags {
 	font-weight: bold;
-	padding-right:5px;
+	padding-left:5px;
 }
 
 .date {
 	font-style:italic;
 	color:#222;
-	padding-left:5px;
+	padding-right:5px;
 }
 
 .page-header h1 {
 	font-family:FiraLight;
-	padding:0 40px;
 }
 
 a {
