@@ -17,9 +17,14 @@ ul.nav {
 	text-align:center;
 }
 
+.nav li a:hover {
+	background-color:#fff;
+	text-decoration:underline;
+}
+
 .content .posts li {
 	list-style:none;
-	padding:8px 10px;
+	padding:8px 0;
 }
 
 .content .posts li em {
@@ -28,7 +33,7 @@ ul.nav {
 }
 
 .content {
-	padding:40px 50px;
+	padding:40px 40px;
 }
 
 @media screen and (max-width: 768px) {
@@ -38,7 +43,6 @@ ul.nav {
 }
 
 .content h2 {
-	padding-left:10px;
 	font-family:FiraLight;
 }
 
@@ -60,7 +64,7 @@ ul.nav {
 
 .page-header h1 {
 	font-family:FiraLight;
-	padding-left: 40px;
+	padding:0 40px;
 }
 
 a {
