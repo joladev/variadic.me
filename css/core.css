@@ -17,8 +17,12 @@ h2 {
 }
 
 p {
-	line-height:26px;
+	line-height:28px;
 	padding-bottom:10px;
+}
+
+p a {
+	text-decoration:underline;
 }
 
 pre {
