@@ -29,6 +29,10 @@ pre {
 	margin-bottom:20px;
 }
 
+.post-title {
+	margin-bottom:5px;
+}
+
 ul.nav {
 	display:flex;
 }
