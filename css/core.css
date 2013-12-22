@@ -64,6 +64,10 @@ ul.nav {
 	color:#666;
 }
 
+.post {
+	border-bottom:1px solid #aaa;
+}
+
 .head {
 	padding:0 50px;
 }
@@ -147,7 +151,7 @@ a:hover {
 
 .bottom {
 	text-align: center;
-	padding:0 20px 20px 20px;
+	padding:0 20px 40px 20px;
 	font-style:italic;
 	color:#666;
 }
