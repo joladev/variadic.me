@@ -8,6 +8,11 @@
 	src: url('../fonts/FiraSans-Regular.woff');
 }
 
+@font-face {
+	font-family: "OpenSans";
+	src: url('../fonts/OpenSans-Regular.ttf');
+}
+
 body {
 	font-size:16px;
 }
@@ -19,6 +24,7 @@ h2 {
 p {
 	line-height:28px;
 	padding-bottom:10px;
+	font-family:OpenSans;
 }
 
 p a {
