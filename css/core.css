@@ -54,6 +54,7 @@ pre {
 
 .post-title {
 	margin-bottom:5px;
+	margin-top:0;
 }
 
 ul.nav {
@@ -86,11 +87,11 @@ ul.nav {
 }
 
 .content {
-	padding:30px 50px;
+	padding:50px 50px;
 }
 
 .footer {
-	padding:10px 50px 30px 50px;
+	padding:0 50px 30px 50px;
 }
 
 @media screen and (max-width: 768px) {
@@ -172,6 +173,7 @@ a:hover {
 	font-style:italic;
 	color:#666;
 	border-top:1px solid #aaa;
+	font-size:14px;
 }
 
 .date {
