@@ -4,13 +4,8 @@
 }
 
 @font-face {
-	font-family: "FiraRegular";
-	src: url('../fonts/FiraSans-Regular.woff');
-}
-
-@font-face {
 	font-family: "OpenSans";
-	src: url('../fonts/OpenSans-Regular.ttf');
+	src: url('../fonts/OpenSans-Regular.woff');
 }
 
 body {
