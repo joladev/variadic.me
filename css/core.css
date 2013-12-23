@@ -95,8 +95,12 @@ ul.nav {
 }
 
 @media screen and (max-width: 768px) {
-	.content, .footer {
-		padding:10px 10px;
+	.content{
+		padding:50px 10px;
+	}
+
+	.footer {
+		padding:0 10px 30px 10px;
 	}
 
 	.head {
