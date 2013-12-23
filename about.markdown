@@ -8,7 +8,7 @@ My name is Erik Kronberg and I'm a software developer at [Bool Nordic AB][bool] 
 
 This blog features everything from opinionated articles on development practices to basic write ups of small time projects in whatever technologies I got worked up about at the moment. There is often a serious lack of material on the step just between learning a language and being able to build advanced applications in it, and that's one of the areas I'll be aiming for in my posts. The source code for this site is [available for reference on github][variadicgh].
 
-Feel free to contact me at <erik@variadic.me>, tweet me at [@eakron][twitter] or check out my profile on [Careers 2.0][careers]. I enjoy emails. And cats.
+Feel free to contact me at <erik@variadic.me>, tweet me at [&#64;eakron][twitter] or check out my profile on [Careers 2.0][careers]. I enjoy emails. And cats.
 
 ## Colophon
 
