@@ -93,7 +93,7 @@ main = hakyllWith config $ do
     match "index.html" $ do
         route idRoute
         compile $ do
-            posts <- fmap (take 5) . recentFirst =<< loadAll "posts/*"
+            posts <- fmap (take 10) . recentFirst =<< loadAll "posts/*"
             let indexContext =
                     listField "posts" (postCtx tags) (return posts) <>
                     field "tags" (\_ -> renderTagList tags) <>
