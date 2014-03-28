@@ -38,8 +38,8 @@ h2 {
 }
 
 p {
-	line-height:28px;
-	padding-bottom:10px;
+	line-height:30px;
+	padding-bottom:15px;
 	font-family:OpenSans;
 }
 
@@ -87,7 +87,7 @@ ul.nav {
 }
 
 .content {
-	padding:50px 50px;
+	padding:80px 50px;
 }
 
 .footer {
@@ -173,7 +173,7 @@ a:hover {
 
 .bottom {
 	text-align: center;
-	padding:60px 0 60px 0;
+	padding:75px 0 60px 0;
 	font-style:italic;
 	color:#999;
 	border-top:1px solid #aaa;
