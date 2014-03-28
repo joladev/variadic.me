@@ -28,7 +28,7 @@ class Dog : Animal {
 
 `Speak` is only defined once, but can be used separately by each sub class. We have achieved glorious code reuse, rejoice! Our code will surely revolutionize the field of animal noise catalogization.
 
-Apart from the absurdity of the example (it is surprisingly hard to find examples of real life use cases where __inheritance__ is truly useful and safe) what we have to realise is that we have already set ourselves up for failure. Inheritance forces a fundamentally unchangable requirement on all heirs. They _have to_ act like the base class. It is now impossible to add an animal that does not speak. What about crickets? They make a noise but they don't speak. Requirements change over time and good code will be able to adjust. Inheritance is saying that everything will always act this specific way. _All animals speak._ Eventually we realise this is wrong, we adjust our model, and say: _All animals make noises_. Except of course all the animals that don't. Nobody is perfect, and business requirements that never ever change are a blissful fantasy. We have to be able to adjust. Now, this example shows a limitation of inheritance, but not necessarily OOP.
+Apart from the absurdity of the example (it is surprisingly hard to find examples of real life use cases where __inheritance__ is truly useful and safe) what we have to realise is that we have already set ourselves up for failure. Inheritance forces a fundamentally unchangable requirement on all heirs. They _have to_ act like the base class. It is now impossible to add an animal that does not speak. What about crickets? They make a noise but they don't speak. Requirements change over time and good code will be able to adjust. Inheritance is saying that everything will always act this specific way. _All animals speak._ Eventually we realise this is wrong, we adjust our model, and say: _All animals make noises_. Except of course all the animals that don't. Nobody is perfect, and business requirements that never ever change are a blissful fantasy. We have to be able to adjust. This example shows a limitation of inheritance, but not necessarily OOP.
 
 ## Composition
 
@@ -45,7 +45,7 @@ Our goal is code reuse, but inheritance is not our only possible weapon. There a
 Lets say we do want some of the `List` like behaviors, without limiting future changes too much. How would we go about this? In my experience, one of the best ways is internal state combined with interfaces. So, maybe the behavior we wanted to mimic from lists was `IEnumerable`. We also want to have a property called `Count`. For simplicity's sake each address is just a simple `string`.
 
 `````{.cs}
-public class AddressBook : IEnumerable
+class AddressBook : IEnumerable
 {
     private List<string> addresses = new List<string>();
     public int Count { get { return addresses.Count; } }
@@ -65,12 +65,14 @@ class Program
 {
     static void Main(string[] args)
     {
-        var ab = new AddressBook(new List<string>() {"One", "Two"});
-        Console.WriteLine(ab.Count);
-        foreach (var a in ab)
+        var addressBook = new AddressBook(new List<string>() { "One", "Two" });
+        Console.WriteLine(addressBook.Count);
+
+        foreach (var address in addressBook)
         {
-            Console.WriteLine(a);
+            Console.WriteLine(address);
         }
+
         Console.Read();
     }
 }
