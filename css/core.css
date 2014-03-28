@@ -72,6 +72,7 @@ ul.nav {
 }
 
 .content .posts li {
+	font-size: 18px;
 	list-style:none;
 	padding:8px 0;
 	margin-left:-40px;
