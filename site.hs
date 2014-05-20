@@ -166,12 +166,4 @@ feedConfiguration = FeedConfiguration
 
 
 --------------------------------------------------------------------------------
-postList :: Tags -> Pattern -> ([Item String] -> Compiler [Item String])
-         -> Compiler String
-postList tags pattern preprocess' = do
-    postItemTpl <- loadBody "templates/postitem.html"
-    posts       <- preprocess' =<< loadAll pattern
-    applyTemplateList postItemTpl (postCtx tags) posts
 
-
---------------------------------------------------------------------------------
