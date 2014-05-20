@@ -88,7 +88,7 @@ ul.nav {
 }
 
 .content {
-	padding:80px 50px;
+	padding:50px 50px;
 }
 
 .footer {
@@ -147,6 +147,11 @@ a {
 
 a:hover {
 	color:#555;
+}
+
+a:active,
+a:focus {
+	color:#222;
 }
 
 .nav a {
