@@ -80,7 +80,7 @@ And on the controller side:
 
 ~~~~~{.javascript}
 angular.module('controllers', ['services'])
-  .factory('MainCtrl', function ($scope, state) {
+  .controller('MainCtrl', function ($scope, state) {
     $scope.state = state.state;
     
     $scope.$on('state.update', function (newState) {
@@ -136,7 +136,7 @@ Using it our controller looks more like this.
 
 ~~~~~{.javascript}
 angular.module('controllers', ['services'])
-  .factory('MainCtrl', function ($scope, state) {
+  .controller('MainCtrl', function ($scope, state) {
     $scope.state = state.state;
   });
 ~~~~~
@@ -147,7 +147,7 @@ In most cases this is plenty! If you need to react to changes in the state objec
 
 ~~~~~{.javascript}
 angular.module('controllers', ['services'])
-  .factory('MainCtrl', function ($scope, state) {
+  .controller('MainCtrl', function ($scope, state) {
     $scope.state = state.state;
 
     $scope.$watch('state', function (newVal, oldVal) {
