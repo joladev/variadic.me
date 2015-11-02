@@ -86,7 +86,7 @@ _Join the conversation at [Reddit][reddit] or email me at <erik@variadic.me>._
 [4clojure]: http://www.4clojure.com/
 [hiccup]: https://github.com/weavejester/hiccup
 [lein]: https://github.com/technomancy/leiningen
-[cljs]: https://github.com/eakron/wishlisted/blob/develop/src/wishlisted/cljs/main.cljs
+[cljs]: https://github.com/eakron/wishlisted/blob/develop/src/wishlistd/cljs/main.cljs
 [jayq]: https://github.com/ibdknox/jayq
 [crate]: https://github.com/ibdknox/crate
 [fetch]: https://github.com/ibdknox/fetch
