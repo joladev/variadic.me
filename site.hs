@@ -150,7 +150,7 @@ feedCtx = mconcat
 config :: Configuration
 config = defaultConfiguration
     { deployCommand = "rsync --checksum --delete -ave 'ssh' \
-                       \_site/* variadic@variadic.me:variadic.me"
+                       \_site/* variadic@variadic.me:/srv/variadic"
     }
 
 
