@@ -159,8 +159,8 @@ feedConfiguration :: FeedConfiguration
 feedConfiguration = FeedConfiguration
     { feedTitle       = "variadic.me blog feed"
     , feedDescription = "blog feed"
-    , feedAuthorName  = "Erik Kronberg"
-    , feedAuthorEmail = "erik@variadic.me"
+    , feedAuthorName  = "Johanna Larsson"
+    , feedAuthorEmail = "johanna@variadic.me"
     , feedRoot        = "http://variadic.me"
     }
 
