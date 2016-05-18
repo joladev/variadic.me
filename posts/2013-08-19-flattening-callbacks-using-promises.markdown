@@ -76,7 +76,7 @@ As you can see, promises are a reasonably simple thing to use. We went from an u
 
 jQuery's implementation of promises is not the ideal example of the [Promises/A+][promises] specification but usable nonetheless. If you are interested in alternatives, take a look at Kris Kowal's [Q.js][qjs], which does handle exceptions.
 
-__As always, if you have any thoughts, ideas or comments, please don't hesitate to email me at <erik@variadic.me>.__
+__As always, if you have any thoughts, ideas or comments, please don't hesitate to email me at <johanna@variadic.me>.__
 
 [callbackgoto]: http://tirania.org/blog/archive/2013/Aug-15.html
 [promises]: http://promises-aplus.github.io/promises-spec/

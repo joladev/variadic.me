@@ -133,6 +133,6 @@ It is orders of magnitude more appealing to write `new Success<string>("WOHOO")`
 
 This was the conclusion of my two part series on null and alternatives to it. I will be writing more on similar subjects in the future, so please subscribe to the feed, and I'll see you again!
 
-_Please email me with questions or statements at <erik@variadic.me>._
+_Please email me with questions or statements at <johanna@variadic.me>._
 
 [maybe1]: http://variadic.me/posts/2012-10-25-maybe-bane-null.html

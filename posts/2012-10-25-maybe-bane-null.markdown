@@ -107,7 +107,7 @@ For more information take a look at some of the languages that avoid null, like:
 
 __*Continue on to part two here: [Adding an Error Message][maybe2].*__
 
-_Don't hesitate to email me with questions or comments at <erik@variadic.me>._
+_Don't hesitate to email me with questions or comments at <johanna@variadic.me>._
 
 [maybe2]: http://variadic.me/posts/2012-10-26-maybe-adding-error-message.html
 [tonyhoare]: http://en.wikipedia.org/wiki/Nullable_type

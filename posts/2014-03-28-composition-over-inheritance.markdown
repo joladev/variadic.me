@@ -80,6 +80,4 @@ class Program
 
 As you can see, we get syntactic sugar; we can write our foreach loop just like a regular `List`. From an end user point of view, it works just like if it had been done through inheritance. We've also got full code reuse, we had to write nothing ourselves. But we did not have to inherit. We have no extra behaviors that we may or may not want. We have left ourselves completely open to change. In fact, we could replace the internal `List` with `Dictionary` and the end user would never even notice a thing. __We have complete freedom to adapt to changing requirements.__
 
-_Know why inheritance is pushed on unsuspecting students? Feeling chatty? Tweet me up at [&#64;eakron][eakron] or send me an email at <erik@variadic.me>._
-
-[eakron]: https://twitter.com/eakron
+_Know why inheritance is pushed on unsuspecting students? Feeling chatty? Send me an email at <johanna@variadic.me>._

@@ -13,7 +13,7 @@ Feel free to contact me at <johanna@variadic.me>. I enjoy emails. And cats.
 ## Colophon
 
 - Site generator: [Hakyll][hakyll]
-- Hosting: [Linode VPS][linode] (referral link)
+- Hosting: Digital Ocean
 - Editor: [Sublime Text 3][subl]
 - Web server: [Nginx][nginx]
 
@@ -21,6 +21,5 @@ Feel free to contact me at <johanna@variadic.me>. I enjoy emails. And cats.
 [markdown]: http://daringfireball.net/projects/markdown/
 [subl]: http://www.sublimetext.com/2
 [nginx]: http://nginx.org/
-[linode]: http://www.linode.com/?r=149bc10682eeaffb72d9bd6e7a4e722c5687768a
 [variadicgh]: https://github.com/yuhama/variadic.me
 [tls]: http://mitpress.mit.edu/books/little-schemer

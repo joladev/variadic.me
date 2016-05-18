@@ -115,8 +115,7 @@ I used the [Mozilla Developer Network article on bind][mdn] almost exclusively w
 
 I have realised something about myself. My number one most effective technique for understanding complex ideas is attempting to explain them to someone else. My brain tends to just gloss over the complexitites of a concept, fooling me into thinking I get it. But when you explain something you have to really, really understand it. Through and through. 
 
-I learned a lot from that tweet, I felt enlightened after working my way through it. I hope you did too! If you have any comments or ideas, please email me at <erik@variadic.me> or tweet me at [&#64;eakron][twitter].
+I learned a lot from that tweet, I felt enlightened after working my way through it. I hope you did too! If you have any comments or ideas, please email me at <johanna@variadic.me>.
 
 [tweet]: https://twitter.com/littlecalculist/status/125413301965438976
 [mdn]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/bind
-[twitter]: https://twitter.com/eakron

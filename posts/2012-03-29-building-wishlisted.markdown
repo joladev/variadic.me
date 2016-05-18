@@ -79,20 +79,20 @@ It also made Java more attractive to me. Clojure's principle of interop rather t
 
 Clojure makes Java fun.
 
-_Join the conversation at [Reddit][reddit] or email me at <erik@variadic.me>._
+_Join the conversation at [Reddit][reddit] or email me at <johanna@variadic.me>._
 
 [reddit]: http://www.reddit.com/r/Clojure/comments/rj0tb/building_the_wishlistedorg_webapp_in_clojure/
 [ibdknox]: http://www.chris-granger.com/
 [4clojure]: http://www.4clojure.com/
 [hiccup]: https://github.com/weavejester/hiccup
 [lein]: https://github.com/technomancy/leiningen
-[cljs]: https://github.com/eakron/wishlisted/blob/develop/src/wishlistd/cljs/main.cljs
+[cljs]: https://github.com/yuhama/wishlisted/blob/develop/src/wishlistd/cljs/main.cljs
 [jayq]: https://github.com/ibdknox/jayq
 [crate]: https://github.com/ibdknox/crate
 [fetch]: https://github.com/ibdknox/fetch
 [hastebin]: http://hastebin.com/
 [johncrepezzi]: http://www.seejohncode.com/
-[github]: https://github.com/eakron/wishlisted
+[github]: https://github.com/yuhama/wishlisted
 [django]: https://www.djangoproject.com/
 [noir]: http://webnoir.org/
 [korma]: http://sqlkorma.com/

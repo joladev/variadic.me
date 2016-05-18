@@ -110,7 +110,7 @@ One of the most important tools in a programmer's tool belt is the data structur
 
 And let's face it, the main motivation for object oriented code in the first place is encapsulation.
 
-_Please email me with questions or statements at <erik@variadic.me> or join the conversation at [Hacker News][hn] or [Reddit][reddit]._
+_Please email me with questions or statements at <johanna@variadic.me> or join the conversation at [Hacker News][hn] or [Reddit][reddit]._
 
 [hn]: http://news.ycombinator.com/item?id=5331233
 [reddit]: http://www.reddit.com/r/programming/comments/19rxq0/solving_problems_using_data_structures/

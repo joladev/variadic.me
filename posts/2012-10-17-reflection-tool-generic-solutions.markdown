@@ -241,7 +241,7 @@ Hopefully this example of transforming code to be more generic has been useful t
 
 Finding a generic solution often requires you to look at a problem in a very different, or at least more abstract, way. At first glance we solved our problem wonderfully with the first example code. But after further thought, we saw that we could easily rewrite our code so that it could handle a much greater set of situations. This piece of code is more loosely coupled to its problem area, it makes few asssumptions about the problem area (although it could be rewritten to make less), and could more effectively be applied to other code bases.
 
-_Please email me with questions or statements at <erik@variadic.me>, or join the conversation on [Reddit (r/programming)][reddit], [Reddit (r/csharp)][rcsharp] or [Hacker News][hackernews]._
+_Please email me with questions or statements at <johanna@variadic.me>, or join the conversation on [Reddit (r/programming)][reddit], [Reddit (r/csharp)][rcsharp] or [Hacker News][hackernews]._
 
 [hackernews]: http://news.ycombinator.com/item?id=4664138
 [rcsharp]: http://www.reddit.com/r/csharp/comments/11mnrw/reflection_as_a_tool_for_generic_solutions/

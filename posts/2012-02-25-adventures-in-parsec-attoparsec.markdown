@@ -173,7 +173,7 @@ pretty i (bs, n) = printf "%d: %s, %d" i (show bs) n
 
 The full code is available [here][codeexample], including one action that counts the total number of bytes transmitted in requests in the log file.
 
-I also implemented this script using the map reduce module from [Real World Haskell][rwh], if there's interest I'll show that too. For questions or feedback, please email me at <erik@variadic.me>.
+I also implemented this script using the map reduce module from [Real World Haskell][rwh], if there's interest I'll show that too. For questions or feedback, please email me at <johanna@variadic.me>.
 
 [attoparsec]: http://hackage.haskell.org/package/attoparsec-0.10.1.1
 [bos]: http://www.serpentine.com/blog/

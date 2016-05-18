@@ -167,12 +167,12 @@ I also can't help but reflect on how much easier it was to understand promises h
 
 If you've gotten this far, I have to congratulate you. It is no small feat keeping your concentration through all that. If you are still hungry for more on Promises, do look at the implementation of [Q.js][qjs], it is surprisingly readable.
 
-_Thank you for reading! I hope it helped you get a bit closer to truly grokking promises, as it did me. Please email me at <erik@variadic.me> with comments, ideas or questions._
+_Thank you for reading! I hope it helped you get a bit closer to truly grokking promises, as it did me. Please email me at <johanna@variadic.me> with comments, ideas or questions._
 
 [qjs]: https://github.com/kriskowal/q
 [promisesa]: http://wiki.commonjs.org/wiki/Promises/A
 [promisesap]: http://promises-aplus.github.io/promises-spec/
-[deferjs]: https://gist.github.com/eakron/6241310
+[deferjs]: https://gist.github.com/yuhama/6241310
 [winjs]: http://msdn.microsoft.com/en-us/library/windows/apps/br211867.aspx
 [closure]: https://en.wikipedia.org/wiki/Closure_%28computer_science%29
 [noop]: https://en.wikipedia.org/wiki/NOP

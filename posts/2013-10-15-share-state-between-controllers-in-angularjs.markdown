@@ -113,7 +113,7 @@ So there it is. The world has been saved. We can now share state between control
 
 I put the finished service into a [gist for your viewing pleasure][gist]. But wait, there's more! Here's an implementation of this "pattern" I used recently with the tantalizingly sexy name of [Nsfw][nsfw]. Don't worry, it is set to __false__.
 
-Please don't hesitate to throw me an email at <erik@variadic.me> or a tweet at [@eakron][twitter].
+Please don't hesitate to throw me an email at <johanna@variadic.me>].
 
 ## Edit
 
@@ -160,6 +160,5 @@ angular.module('controllers', ['services'])
 [di]: http://docs.angularjs.org/guide/di
 [misko]: https://twitter.com/mhevery
 [concepts]: http://docs.angularjs.org/guide/concepts
-[gist]: https://gist.github.com/eakron/6989249
-[nsfw]: https://gist.github.com/eakron/6989424
-[twitter]: https://twitter.com/eakron
+[gist]: https://gist.github.com/yuhama/6989249
+[nsfw]: https://gist.github.com/yuhama/6989424
