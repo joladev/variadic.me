@@ -2,9 +2,9 @@
 title: Projects
 ---
 
-### menukeeper.com
+### harry potter api
 
-Using a Clojure backend and AngularJS backend to simplify creating, sharing and finding recipes online. Live at [menukeeper.com][menukeeper].
+A CORS enabled example API, with Swagger docs, used in the [Pink Programming][pp] [Pink Web Dev][pwd] initiative to introduce RESTful APIs. Built in Clojure using [compojure-api][compojure-api]. [Code on Github][harry-potter-api].
 
 ### repicbro.com
 
@@ -23,4 +23,7 @@ AJAX webapp built in Clojure for handling wishlists, no longer up. Source code a
 [hakyll]: http://jaspervdj.be/hakyll/
 [variadicgh]: https://github.com/yuhama/variadic.me
 [stinaq]: https://github.com/stinaq
-[repicbro]: https://github.com/stinaq/repicbro.com
+[harry-potter-api]: https://github.com/yuhama/harry-potter-api
+[compojure-api]: https://github.com/metosin/compojure-api
+[pwd]: http://pinkwebdev.se/
+[pp]: http://www.pinkprogramming.se/

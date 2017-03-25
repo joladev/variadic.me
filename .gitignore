@@ -5,3 +5,4 @@ cdr
 *.o
 .DS_Store
 site
+.stack-work

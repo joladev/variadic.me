@@ -10,16 +10,5 @@ This blog features everything from opinionated articles on development practices
 
 Feel free to contact me at <johanna@variadic.me>. I enjoy emails. And cats.
 
-## Colophon
-
-- Site generator: [Hakyll][hakyll]
-- Hosting: Digital Ocean
-- Editor: [Sublime Text 3][subl]
-- Web server: [Nginx][nginx]
-
-[hakyll]: http://jaspervdj.be/hakyll/
-[markdown]: http://daringfireball.net/projects/markdown/
-[subl]: http://www.sublimetext.com/2
-[nginx]: http://nginx.org/
 [variadicgh]: https://github.com/yuhama/variadic.me
 [tls]: http://mitpress.mit.edu/books/little-schemer
