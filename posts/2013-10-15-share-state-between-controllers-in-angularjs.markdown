@@ -113,7 +113,7 @@ So there it is. The world has been saved. We can now share state between control
 
 I put the finished service into a [gist for your viewing pleasure][gist]. But wait, there's more! Here's an implementation of this "pattern" I used recently with the tantalizingly sexy name of [Nsfw][nsfw]. Don't worry, it is set to __false__.
 
-Please don't hesitate to throw me an email at <johanna@variadic.me>].
+Please don't hesitate to throw me an email at <johanna@variadic.me>.
 
 ## Edit
 
